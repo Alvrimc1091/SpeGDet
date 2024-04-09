@@ -142,25 +142,24 @@ picam2.configure(camera_config)
 picam2.start_preview(Preview.NULL)
 
 def enviar_foto(HOST, PORT):
-        try:
-            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-                s.connect((HOST, PORT))
-                picam2.start()
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.connect((HOST, PORT))
+            picam2.start()
+            time.sleep(1)
+            while True:
+                hora_santiago = datetime.datetime.now(zona_santiago)
+                nombre_foto = f"foto_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
+                picam2.capture_file(nombre_foto)
                 time.sleep(1)
-                while True:
-                    hora_santiago = datetime.datetime.now(zona_santiago)
-                    picam2.capture_file("foto.jpg")
-                    time.sleep(1)
-                    with open("foto.jpg", "rb") as f:
-                        while True:
-                            data = f.read(1024)
-                            if not data:
-                                break
-                            s.sendall(data)
-                    print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Foto enviada al servidor")
-                    time.sleep(5)
-        except Exception as e:
-            print("Error sending photo: ", e)
+                with open(nombre_foto, "rb") as f:
+                    data = f.read()
+                    s.sendall(data)
+                    print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Foto {nombre_foto} enviada al servidor")
+                time.sleep(60)
+    except Exception as e:
+        print("Error sending photo:", e)
+
 
 def enviar_datos_sensor(client_socket):
     try:
@@ -173,7 +172,7 @@ def enviar_datos_sensor(client_socket):
             lcd.lcd_display_string(f"{hora_santiago.strftime('%H:%M:%S')}", 2)
             print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Datos del sensor enviados al servidor")
 
-            time.sleep(6)  # Envía datos cada 3 segundos
+            time.sleep(60)  # Envía datos cada 3 segundos
     except Exception as e:
         print("Error sending data:", e)
 
@@ -202,7 +201,7 @@ def datos_sensor():
 
 def main():
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    host = '192.168.2.40'
+    host = '192.168.2.6'
     port = 8080
     server_address = (host, port)  # Dirección IP y puerto del servidor
     client.connect(server_address)
