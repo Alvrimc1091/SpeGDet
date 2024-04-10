@@ -156,6 +156,7 @@ def enviar_foto(HOST, PORT):
                     data = f.read()
                     s.sendall(data)
                     print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Foto {nombre_foto} enviada al servidor")
+                os.remove(nombre_foto)
                 time.sleep(60)
     except Exception as e:
         print("Error sending photo:", e)
