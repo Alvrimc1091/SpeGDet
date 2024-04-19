@@ -87,7 +87,7 @@ def datos_sensor():
 def main():
     # Inicialización del servidor
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    host = '192.168.2.6'
+    host = '192.168.2.12'
     port = 8080
     server_address = (host, port)  # Dirección IP y puerto del servidor
     client.connect(server_address)
