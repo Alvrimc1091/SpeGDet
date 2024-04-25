@@ -11,7 +11,7 @@
 # TO DO
 # Establecer conexión servidor (RPI) - cliente (PC) (REVISAR)
 # Guardar datos en .csv de la misma forma que se hace actualmente (REVISAR)
-# Script para tomar datos y fotos una única vez (REVISAR)
+# Script para tomar datos y fotos una única vez (OK)
 # Realizar calibración y estimación de granos 
 
 import socket
@@ -225,7 +225,7 @@ def main():
 
     # Definición de los parámetros del servidor
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    host = '192.168.2.12' # Ingresar IP de RPI
+    host = '192.168.3.101' # Ingresar IP de RPI
     port = 8080 # Ingresar puerto para sensor superior/inferior (deben ser diferente)
     server.bind((host, port))  # Enlaza el servidor a la dirección IP y puerto especificados
     server.listen(5)

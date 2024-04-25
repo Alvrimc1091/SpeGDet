@@ -65,25 +65,27 @@ def mostrar_datos():
     print("F8 - 680nm/Red     %s" % bar_graph(sensor.channel_680nm))
     print("Clear              %s" % bar_graph(sensor.channel_clear))
     print("Near-IR (NIR)      %s" % bar_graph(sensor.channel_nir))
-    print("\n------------------------------------------------")
+
+    print("------------------------------------------------")
 
     datos = datos_sensor()
     hora_santiago = datetime.datetime.now(zona_santiago)
     datos_str = ",".join(map(str, datos))
-    foto_id = f"foto_up_{hora_santiago.strftime("%H%M%S_%d%m%Y")}.jpg"
+    foto_id = f"foto_up_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
     guardar_datos(datos_str, foto_id, hora_santiago)
 
 def guardar_datos(datos, foto_id, hora_santiago):
 
     print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Datos del sensor guardados")
-    foto_id = f"foto_up_{hora_santiago.strftime("%H%M%S_%d%m%Y")}.jpg"
+    print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Foto guardada")
+    foto_id = f"foto_up_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
 
     datos = datos.split(",")
-    datos.append("")
+    # datos.append("")
     datos.append(foto_id)
     fecha_hora = datetime.datetime.now().strftime("%Y-%m-%d,%H:%M:%S")
 
-    with open(f"data_{hora_santiago.strftime("%H%M%S_%d%m%Y")}.csv", mode='a', newline='') as archivo_csv:
+    with open(f"data_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.csv", mode='a', newline='') as archivo_csv:
         escritor_csv = csv.writer(archivo_csv)
         escritor_csv.writerow([fecha_hora] + datos)
 
@@ -103,7 +105,7 @@ def tomar_foto():
         
         # Guardar información de la foto en el archivo CSV
         foto_id = f"foto_up_{fecha_hora_actual}.jpg"
-        guardar_datos("", foto_id, hora_santiago)
+        # guardar_datos("", foto_id, hora_santiago)
 
     except Exception as e:
         print("Error al tomar la foto")
@@ -139,7 +141,7 @@ def main():
     # Cierre de la medición
     # Imprime mensaje de finalización de la medición
     limpiar_pantalla(hora_santiago)
-    lcd.lcd_display_string("Medición lista", 2)
+    lcd.lcd_display_string("Medicion lista", 2)
     time.sleep(5)
 
 if __name__ == "__main__":
