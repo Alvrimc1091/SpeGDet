@@ -9,8 +9,9 @@
 # Se puede crear rutina para subir los datos al Github
 
 # TO DO
-# Establecer conexión servidor (RPI) - cliente (PC)
+# Establecer conexión servidor (RPI) - cliente (PC) (REVISAR)
 # Guardar datos en .csv de la misma forma que se hace actualmente (REVISAR)
+# Script para tomar datos y fotos una única vez (REVISAR)
 # Realizar calibración y estimación de granos 
 
 import socket

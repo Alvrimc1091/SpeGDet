@@ -1,5 +1,5 @@
 # Script para tomar datos de la muestra
-
+import csv
 import socket
 import time
 import threading
@@ -21,7 +21,7 @@ zona_santiago = zoneinfo.ZoneInfo("America/Santiago")
 # Inicialización del sensor AS7341
 sensor = AS7341(board.I2C())
 
-sensor.led = 
+# sensor.led = 
 
 # Configuración inicial de la cámara
 picam2 = Picamera2()
@@ -52,8 +52,8 @@ def datos_sensor():
     ]
     return datos_sensor
 
-def tomar_datos():
-    print("Datos de la muestra")
+def mostrar_datos():
+    print("------ Datos de la muestra ------")
 
     print("F1 - 415nm/Violet  %s" % bar_graph(sensor.channel_415nm))
     print("F2 - 445nm//Indigo %s" % bar_graph(sensor.channel_445nm))
@@ -67,40 +67,80 @@ def tomar_datos():
     print("Near-IR (NIR)      %s" % bar_graph(sensor.channel_nir))
     print("\n------------------------------------------------")
 
-def tomar_foto():
+    datos = datos_sensor()
+    hora_santiago = datetime.datetime.now(zona_santiago)
+    datos_str = ",".join(map(str, datos))
+    foto_id = f"foto_up_{hora_santiago.strftime("%H%M%S_%d%m%Y")}.jpg"
+    guardar_datos(datos_str, foto_id, hora_santiago)
 
+def guardar_datos(datos, foto_id, hora_santiago):
+
+    print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Datos del sensor guardados")
+    foto_id = f"foto_up_{hora_santiago.strftime("%H%M%S_%d%m%Y")}.jpg"
+
+    datos = datos.split(",")
+    datos.append("")
+    datos.append(foto_id)
+    fecha_hora = datetime.datetime.now().strftime("%Y-%m-%d,%H:%M:%S")
+
+    with open(f"data_{hora_santiago.strftime("%H%M%S_%d%m%Y")}.csv", mode='a', newline='') as archivo_csv:
+        escritor_csv = csv.writer(archivo_csv)
+        escritor_csv.writerow([fecha_hora] + datos)
+
+def tomar_foto():
     try:
         picam2.start()    
         hora_santiago = datetime.datetime.now(zona_santiago)
         nombre_foto = f"foto_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
+        fecha_hora_actual = hora_santiago.strftime("%H%M%S_%d%m%Y")
         
-        picam2.capture_file()
+        picam2.capture_file(nombre_foto)
         time.sleep(2)
 
         with open(nombre_foto, "rb") as f:
             data = f.read()
             #print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Foto {nombre_foto} guardada")        
+        
+        # Guardar información de la foto en el archivo CSV
+        foto_id = f"foto_up_{fecha_hora_actual}.jpg"
+        guardar_datos("", foto_id, hora_santiago)
 
     except Exception as e:
         print("Error al tomar la foto")
+
+def limpiar_pantalla(hora_santiago):
+    lcd.lcd_clear()
+    lcd.lcd_display_string(f"[{hora_santiago.strftime('%H:%M:%S')}]", 1)
 
 def main():
 
     hora_santiago = datetime.datetime.now(zona_santiago)
 
-    tomar_datos()
+    # Comienza recopilando los datos de la muestra
+    # Imprime un mensaje en pantalla
+    limpiar_pantalla(hora_santiago)
+    lcd.lcd_display_string("Tomando datos", 2)
+    time.sleep(3)
+
+    # Toma los datos e inmediatamente la foto
+    mostrar_datos()
     tomar_foto()
 
-    lcd.lcd_clear()
-    lcd.lcd_display_string(f"[{hora_santiago.strftime('%H:%M:%S')}]", 1)
+    # Envía mensaje de que los datos fueron guardados
+    limpiar_pantalla(hora_santiago)
     lcd.lcd_display_string("Datos guardados", 2)
     time.sleep(3)
 
-    lcd.lcd_clear()
-    lcd.lcd_display_string(f"[{hora_santiago.strftime('%H:%M:%S')}]", 1)
-    lcd.lcd_display_string("Foto Guardada", 2)
+    # Envía mensaje de que la foto fue guardada
+    limpiar_pantalla(hora_santiago)
+    lcd.lcd_display_string("Foto guardada", 2)
     time.sleep(3)
 
+    # Cierre de la medición
+    # Imprime mensaje de finalización de la medición
+    limpiar_pantalla(hora_santiago)
+    lcd.lcd_display_string("Medición lista", 2)
+    time.sleep(5)
 
 if __name__ == "__main__":
     main()
