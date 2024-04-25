@@ -14,6 +14,7 @@
 # Script para tomar datos y fotos una única vez (OK)
 # Realizar calibración y estimación de granos 
 
+import csv
 import socket
 import time
 import threading
@@ -26,20 +27,30 @@ import I2C_LCD_driver
 from adafruit_as7341 import AS7341
 from picamera2 import Picamera2, Preview
 
-# Definición de pantalla LCD como variable "lcd"
-lcd = I2C_LCD_driver.lcd()
 
 # Zona horaria
 zona_santiago = zoneinfo.ZoneInfo("America/Santiago")
 
-# Inicialización del sensor AS7341
-sensor = AS7341(board.I2C())
 
-# Configuración inicial de la cámara
-picam2 = Picamera2()
-camera_config = picam2.create_preview_configuration() 
-picam2.configure(camera_config) 
-picam2.start_preview(Preview.NULL)
+def inicializar(): 
+    global lcd, sensor, picam2, camera_config
+      
+    # Definición de pantalla LCD como variable "lcd"
+    lcd = I2C_LCD_driver.lcd()
+     
+    # Inicialización del sensor AS7341
+    sensor = AS7341(board.I2C())
+
+    lcd.lcd_clear()
+    hora_santiago = datetime.datetime.now(zona_santiago)
+    lcd.lcd_display_string(f"[{hora_santiago.strftime('%H:%M:%S')}]", 1)
+    lcd.lcd_display_string("Starting Server", 2)
+
+    # Configuración inicial de la cámara
+    picam2 = Picamera2()
+    camera_config = picam2.create_preview_configuration() 
+    picam2.configure(camera_config) 
+    picam2.start_preview(Preview.NULL)
 
 # Lista básica de comandos
 COMMANDS = {
@@ -93,17 +104,21 @@ def guardar_foto(HOST, PORT):
             # Crea la foto con el nombre de la hora indicada
             hora_santiago = datetime.datetime.now()  # Obtiene la hora actual
             fecha_hora_actual = hora_santiago.strftime("%H%M%S_%d%m%Y")
-            foto_id = f"foto_up_{fecha_hora_actual}.jpg"
+            foto_id = f"/home/pi/SpeGDet/Tests/Data/foto_up_{fecha_hora_actual}.jpg"
 
             # Toma la foto y llama a la función para enviar la foto
             picam2.capture_file(foto_id)
-            time.sleep(1)
+            foto = picam2.capture_file(foto_id)
+
+            print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Foto guardada en {foto_id}")
+
+            time.sleep(2)
             enviar_foto(HOST, PORT, foto_id)
 
-            # Guarda la foto con el nombre de la hora indicada
-            with open(foto_id, "ab") as f:  # Modo "ab" para escritura binaria y anexar
-                f.write(data)
-                print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Foto guardada como {foto_id}")
+            # # Guarda la foto con el nombre de la hora indicada
+            # with open(foto_id, "ab") as f:  # Modo "ab" para escritura binaria y anexar
+            #     f.write(data)
+            #     print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Foto guardada como {foto_id}")
             
             # Guarda información de la foto en el archivo CSV
             datos_a_csv("", foto_id)
@@ -120,20 +135,16 @@ def guardar_foto(HOST, PORT):
 # 
 def enviar_foto(HOST, PORT, foto_id):
     try:
+        hora_santiago = datetime.datetime.now(zona_santiago)
         # Establece la conexión con los clientes para enviar la foto
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             s.connect((HOST, PORT))
             
-            # Entra al ciclo para enviar la foto
-            while True:
-                # hora_santiago = datetime.datetime.now(zona_santiago)
-                # nombre_foto = f"foto_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
-
-                # Envía la foto al servidor e imprime el mensaje
-                with open(foto_id, "rb") as f:
-                    data = f.read()
-                    s.sendall(data)
-                    print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Foto {foto_id} enviada al servidor")
+            # Envía la foto al servidor e imprime el mensaje
+            with open(foto_id, "rb") as f:
+                data = f.read()
+                s.sendall(data)
+                print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Foto {foto_id} enviada al servidor")
     
     # Rutina para manejar errores
     except Exception as e:
@@ -145,11 +156,11 @@ def guardar_datos_sensor(client_socket):
     try:
         # Ciclo para obtener y guardar los datos del sensor
         while True:
-            data = ",".join(map(str, datos_sensor()))  # Obtener datos del sensor y convertirlos a cadena
             hora_santiago = datetime.datetime.now(zona_santiago)
+            data = ",".join(map(str, datos_sensor()))  # Obtener datos del sensor y convertirlos a cadena
 
             # Guarda la foto y datos en un CSV
-            foto_id = f"foto_up_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
+            foto_id = f"/home/pi/SpeGDet/Tests/Data/foto_up_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
             datos_a_csv(data, foto_id)
 
             # Envía los datos a los clientes
@@ -169,10 +180,14 @@ def guardar_datos_sensor(client_socket):
 
 # Definición enviar_datos_sensor
 # Envía los datos recopilados por
-def enviar_datos_sensor(client_socket, data):
+def enviar_datos_sensor(client_socket, datos):
     try:
-        while True:
-            client_socket.send(data.encode())
+        # Envía los datos al cliente a través del socket
+        client_socket.send(datos.encode())
+        print("Datos enviados al cliente:", datos)
+
+        client_socket.send(datos.encode())
+        # Vuelve a repetir el ciclo cada 60 seg
 
     except Exception as e:
         print("Error sending data:", e)
@@ -185,7 +200,7 @@ def datos_a_csv(datos, foto_id):
     fecha_hora = datetime.datetime.now().strftime("%Y-%m-%d,%H:%M:%S")
     datos.append(foto_id)
 
-    with open("data_test.csv", mode='a', newline='') as archivo_csv:
+    with open("/home/pi/SpeGDet/Tests/Data/data_test.csv", mode='a', newline='') as archivo_csv:
         escritor_csv = csv.writer(archivo_csv)
         escritor_csv.writerow([fecha_hora] + datos)
 
@@ -231,12 +246,14 @@ def main():
     server.listen(5)
     hora_santiago = datetime.datetime.now(zona_santiago)
     
+    inicializar()
+
     # Inicialización del servidor
     # Se muestran mensajes en consola y en pantalla
     lcd.lcd_clear()
     lcd.lcd_display_string(f"[{hora_santiago.strftime('%H:%M:%S')}]", 1)
-    lcd.lcd_display_string("Enviando datos", 2)    
-    print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Escuchando en {host}:{port} and Listening on {host}:{port+1}")
+    lcd.lcd_display_string("Enviando datos", 2)
+    print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Escuchando en {host}:{port} y en {host}:{port+1}")
     time.sleep(3)
 
 
@@ -244,7 +261,7 @@ def main():
         # Inicialización sockets y establecimiento de conexiones
         client_socket, addr = server.accept()
         hora_santiago = datetime.datetime.now(zona_santiago)
-        print("[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Conexión entrante en: %s:%d" % (addr[0], addr[1]))
+        print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Conexión entrante en: %s:%d" % (addr[0], addr[1]))
 
         # Inicia el hilo para obtener datos periódicamente 
         datos_thread = threading.Thread(target=guardar_datos_sensor, args=(client_socket,))
