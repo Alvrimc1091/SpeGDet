@@ -128,7 +128,7 @@ def guardar_foto(HOST, PORT):
             # os.remove(foto_id)
 
             # Vuelve a repetir el ciclo cada 60 seg
-            time.sleep(60)
+            time.sleep(120)
     
     # Rutina para manejar errores
     except Exception as e:
@@ -176,7 +176,7 @@ def guardar_datos_sensor(client_socket):
             print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Datos del sensor guardados")
 
             # Vuelve a repetir el ciclo cada 60 segundos
-            time.sleep(60)
+            time.sleep(120)
 
     except Exception as e:
         print("Error al guardar los datos:", e)
