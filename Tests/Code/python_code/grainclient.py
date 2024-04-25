@@ -39,14 +39,15 @@ def recibir_foto(HOST, PORT):
                         # Guarda la foto con la hora actual que fue recibida
                         hora_santiago = datetime.datetime.now()  # Actualiza la hora actual
                         fecha_hora_actual = hora_santiago.strftime("%H%M%S_%d%m%Y")  # Actualiza la fecha y hora actual
-                        foto_id = f"/home/pi/SpeGDet/Tests/Data/foto_up_{fecha_hora_actual}.jpg" # Cambiar en función del directorio presente en el cliente
+                        foto_id = f"/home/pi/SpeGDet/Tests/Data_Client/foto_{fecha_hora_actual}.jpg" # Cambiar en función del directorio presente en el cliente
+                        foto_id_corta = f"foto_{fecha_hora_actual}.jpg"
                         with open(foto_id, "ab") as f:  # Modo "ab" para escritura binaria y anexar
                             f.write(data)
-                            print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Foto recibida y guardada como {foto_id}")
+                            print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Foto recibida y guardada como {foto_id_corta}")
 
                     # Guardar información de la foto en el archivo CSV
-                    foto_id = f"/home/pi/SpeGDet/Tests/Data/foto_up_{fecha_hora_actual}.jpg"
-                    datos_a_csv("", foto_id)
+                    foto_id = f"/home/pi/SpeGDet/Tests/Data_Client/foto_{fecha_hora_actual}.jpg"
+                    # datos_a_csv("", foto_id)
 
     except Exception as e:
         print("Error al recibir la foto:", e)
@@ -59,7 +60,7 @@ def recibir_datos(client_socket):
             data = client_socket.recv(1024).decode()  # Recibe datos periódicos del servidor
             hora_santiago = datetime.datetime.now(zona_santiago)
             print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Datos del sensor recibidos \n {data}")
-            foto_id = f"/home/pi/SpeGDet/Tests/Data/foto_up_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
+            foto_id = f"/home/pi/SpeGDet/Tests/Data_Client/foto_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
             datos_a_csv(data, foto_id)
 
     except Exception as e:
@@ -70,10 +71,9 @@ def recibir_datos(client_socket):
 def datos_a_csv(datos, foto_id):
     datos = datos.split(",")  # Separar la cadena de datos en una lista de valores
     fecha_hora = datetime.datetime.now().strftime("%Y-%m-%d,%H:%M:%S")
-    datos.append("")  # Agregar un espacio para el campo 'foto_id', ya que no se proporciona en los datos recibidos
     datos.append(foto_id)  # Agregar el foto_id al final de los datos
  
-    with open("/home/pi/SpeGDet/Tests/Data/data_up.csv", mode='a', newline='') as archivo_csv: # Cambiar en función del directorio presente en el cliente
+    with open("/home/pi/SpeGDet/Tests/Data_Client/data_test.csv", mode='a', newline='') as archivo_csv: # Cambiar en función del directorio presente en el cliente
         escritor_csv = csv.writer(archivo_csv)
         escritor_csv.writerow([fecha_hora] + datos)
 
@@ -99,7 +99,7 @@ def main():
             if not command:
                 break
             print("Command received:", command)
-            if command == "q":
+            if command == "exit":
                 print("Closing connection...")
                 os._exit(0)
             response = "Response to '{}'".format(command)  # Procesa el comando (placeholder)
