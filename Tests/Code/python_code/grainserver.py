@@ -14,9 +14,11 @@
 # Script para tomar datos y fotos una única vez (OK)
 # Manejar comandos 
 # Realizar calibración y estimación de granos 
+# Enviar datos de manera local independiente de la conexión con algún cliente
 
 import csv
 import socket
+import select
 import time
 import threading
 import os
@@ -239,6 +241,27 @@ def datos_sensor():
 # Función principal
 # ------
 
+def verificar_clientes(host, port):
+    try:
+        # Establece la conexión con el servidor
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.bind((host, port))
+            s.listen(5)
+
+            while True:
+                conn, addr = s.accept()
+
+                with conn:
+                    while True:
+                        mensaje = conn.recv(1024)
+                        if not mensaje: 
+                            break
+                        print(mensaje.decode())
+                        
+    except Exception as e:
+        print("Error al recibir mensaje de verificación:", e)
+
+
 def main():
 
     # Definición de los parámetros del servidor
@@ -249,7 +272,7 @@ def main():
     server.listen(5)
     hora_santiago = datetime.datetime.now(zona_santiago)
     
-    inicializar()
+    inicializar() # Función para inicializar la pantalla LCD, sensor y cámara
 
     # Inicialización del servidor
     # Se muestran mensajes en consola y en pantalla
@@ -277,6 +300,10 @@ def main():
         # Inicia el hilo para manejar comandos
         command_handler = threading.Thread(target=manejar_comandos, args=(client_socket,))
         command_handler.start()
+
+        # Inicia el hilo para obtener datos periódicamente 
+        report_thread = threading.Thread(target=verificar_clientes, args=(host, port+3))
+        report_thread.start()
 
 if __name__ == "__main__":
     main()
