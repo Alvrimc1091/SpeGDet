@@ -61,24 +61,28 @@ maiz_db = [227.0, 1552.3, 790.3, 1812.3, 3524.2, 3653.9, 2695.7, 1479.4]#, 6352.
 poroto_db = [146.0, 1044.0, 598.2, 1256.3, 2112.8, 2191.6, 1701.0, 1132.1]#, 4349.1, 270.7]
 #[169.3, 1412.0, 754.8, 1525.2, 2449.0, 2579.1, 1958.6, 1315.9, 6339.1, 373.7]
 
+# ------------------- Muestras mezcladas (50/50) --------------------
+
+# Base de datos para trigo/maiz
+trigomaiz_db = [201.2, 1613.7, 804.6, 1670.3, 2765.9, 2807.0, 2072.4, 1160.8]
+
+# Base de datos para trigo/poroto
+trigoporoto_db = [158.1, 1233.3, 651.6, 1340.3, 2141.1, 2123.2, 1649.4, 954.2]
+
+# Base de datos para maiz/poroto
+maizporoto_db = [184.0, 1203.3, 646.1, 1482.9, 2700.2, 2841.8, 2126.1, 1185.2]
+
 # Diccionario con las muestras puras
 muestraspuras_dic = {
 
         "trigo": trigo_db,
         "maiz": maiz_db,
-        "poroto": poroto_db
+        "poroto": poroto_db,
+        "poroto/maiz": maizporoto_db,
+        "trigo/maiz": trigomaiz_db,
+        "trigo/poroto": trigoporoto_db
+        
 }
-
-# ------------------- Muestras mezcladas (50/50) --------------------
-
-# Base de datos para trigo/maiz
-trigomaiz_db = []
-
-# Base de datos para trigo/poroto
-trigoporoto_db = []
-
-# Base de datos para maiz/poroto
-maizporoto_db = []
 
 # -------------------------------------------------------------------
 # ----------------------- Definición de funciones -------------------
@@ -108,20 +112,20 @@ def datos_sensor():
     return datos_sensor
 
 def mostrar_datos():
-    print("------ Datos de la muestra ------")
+    # print("------ Datos de la muestra ------")
 
-    print("F1 - 415nm/Violet  %s" % bar_graph(sensor.channel_415nm))
-    print("F2 - 445nm//Indigo %s" % bar_graph(sensor.channel_445nm))
-    print("F3 - 480nm//Blue   %s" % bar_graph(sensor.channel_480nm))
-    print("F4 - 515nm//Cyan   %s" % bar_graph(sensor.channel_515nm))
-    print("F5 - 555nm/Green   %s" % bar_graph(sensor.channel_555nm))
-    print("F6 - 590nm/Yellow  %s" % bar_graph(sensor.channel_590nm))
-    print("F7 - 630nm/Orange  %s" % bar_graph(sensor.channel_630nm))
-    print("F8 - 680nm/Red     %s" % bar_graph(sensor.channel_680nm))
+    # print("F1 - 415nm/Violet  %s" % bar_graph(sensor.channel_415nm))
+    # print("F2 - 445nm//Indigo %s" % bar_graph(sensor.channel_445nm))
+    # print("F3 - 480nm//Blue   %s" % bar_graph(sensor.channel_480nm))
+    # print("F4 - 515nm//Cyan   %s" % bar_graph(sensor.channel_515nm))
+    # print("F5 - 555nm/Green   %s" % bar_graph(sensor.channel_555nm))
+    # print("F6 - 590nm/Yellow  %s" % bar_graph(sensor.channel_590nm))
+    # print("F7 - 630nm/Orange  %s" % bar_graph(sensor.channel_630nm))
+    # print("F8 - 680nm/Red     %s" % bar_graph(sensor.channel_680nm))
     # print("Clear              %s" % bar_graph(sensor.channel_clear))
     # print("Near-IR (NIR)      %s" % bar_graph(sensor.channel_nir))
 
-    print("------------------------------------------")
+    # print("------------------------------------------")
 
     datos = datos_sensor()
     # promedio_datos_medida(datos)
@@ -157,7 +161,7 @@ def distancia_euclidiana(vector_db, vector_medido):
     
     suma_cuadrados = sum((x - y) ** 2 for x, y in zip(vector_db, vector_medido))
     distancia = math.sqrt(suma_cuadrados)
-    return distancia
+    return distancia/100
 
 def estimacion_grano(vector_db, vector_medida):
     hora_santiago = datetime.datetime.now(zona_santiago)
@@ -236,7 +240,7 @@ def main():
     # Imprime un mensaje en pantalla
     limpiar_pantalla(hora_santiago)
     lcd.lcd_display_string("Tomando datos", 2)
-    time.sleep(3)
+    time.sleep(2)
 
     # Rutina para tomar datos y foto
     # Toma los datos e inmediatamente la foto
@@ -244,32 +248,35 @@ def main():
     # Ejecutar mostrar_datos varias veces para agregar datos a la matriz
     for _ in range(meassurement):
         led_array.on()
+        sensor.led_current = 30
+        #sensor.led = True
         datos_medida_final.append(mostrar_datos())
     
     tomar_foto()
+    sensor.led = False
     led_array.off()
 
     # Envía mensaje de que los datos fueron guardados
     limpiar_pantalla(hora_santiago)
     lcd.lcd_display_string("Datos guardados", 2)
-    time.sleep(2)
+    time.sleep(1)
 
     # Envía mensaje de que la foto fue guardada
     limpiar_pantalla(hora_santiago)
     lcd.lcd_display_string("Foto guardada", 2)
-    time.sleep(2)
+    time.sleep(1)
 
     # Cierre de la medición
     # Imprime mensaje de finalización de la medición
     limpiar_pantalla(hora_santiago)
     lcd.lcd_display_string("Medicion lista", 2)
-    time.sleep(2)
+    time.sleep(1)
 
     # Procesamiento de la medición
     # Procesa los datos tomados y realiza la estimación
     limpiar_pantalla(hora_santiago)
     lcd.lcd_display_string("Procesando datos", 2)
-    time.sleep(3)
+    time.sleep(2)
 
     # promedior las columnas de los datos totales
     resultados = promedio_datos_medida(*datos_medida_final)

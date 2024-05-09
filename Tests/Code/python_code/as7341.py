@@ -8,13 +8,19 @@ i2c = board.I2C()  # uses board.SCL and board.SDA
 # i2c = board.STEMMA_I2C()  # For using the built-in STEMMA QT connector on a microcontroller
 sensor = AS7341(i2c)
 
+sensor.led_current = 50
+print("enabling led")
+sensor.led = True
+
+
 
 def bar_graph(read_value):
     scaled = int(read_value / 1000)
     return "[%5d] " % read_value + (scaled * "*")
 
+meassures = 3
 
-while True:
+while meassures < 3:
     print("F1 - 415nm/Violet  %s" % bar_graph(sensor.channel_415nm))
     print("F2 - 445nm//Indigo %s" % bar_graph(sensor.channel_445nm))
     print("F3 - 480nm//Blue   %s" % bar_graph(sensor.channel_480nm))
@@ -27,3 +33,7 @@ while True:
     print("Near-IR (NIR)      %s" % bar_graph(sensor.channel_nir))
     print("\n------------------------------------------------")
     sleep(1)
+    meassures += 1
+
+sensor.led = False
+print("led disabled")
