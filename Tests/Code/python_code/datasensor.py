@@ -26,11 +26,23 @@ zona_santiago = zoneinfo.ZoneInfo("America/Santiago")
 # Inicialización del sensor AS7341
 sensor = AS7341(board.I2C())
 
+# sensor.setatime = 1
+# sensor.setASTEP = 10
+
+# Valores de Ganancia 
+#   Parámetro      ||   Valor
+# sensor.gain = 0  ||     0.5
+# sensor.gain = 1  ||
+# sensor.gain = 2  ||
+print(sensor.atime)
+print(sensor.astep)
+print(sensor.gain) #= 512
+
 # Definición de contador total de muestras
 meassurement = 1
 
 # Definición del threshold
-threshold = 1000
+threshold = 100
 
 # sensor.led = 
 
@@ -53,7 +65,8 @@ luzblanca_db = [770.8, 6034.7, 2179.6, 3800.3, 4651.4, 3841.8, 2659.8, 1182.7]
 #, 13999.6, 469.3]
 
 # Base de datos para el trigo
-trigo_db = [159.2, 1328.8, 662.0, 1208.1, 2060.0, 2075.8, 1581.8, 1065.6]
+trigo_db = [178.71428571428572, 1705.0, 831.3333333333334, 1354.5714285714287, 2192.3333333333335, 2167.4761904761904, 1631.7619047619048, 1038.4761904761904]
+#[159.2, 1328.8, 662.0, 1208.1, 2060.0, 2075.8, 1581.8, 1065.6] # Promedio muestras movimiento y cristal
 
 # Promedio datos estáticos = [159.2, 1328.8, 662.0, 1208.1, 2060.0, 2075.8, 1581.8, 1065.6]
 # Promedio Total = [275.68, 2830.8, 1196.76, 2126.4, 3114.0, 2992.44, 2073.2, 1286.24]
@@ -75,7 +88,8 @@ trigo_db = [159.2, 1328.8, 662.0, 1208.1, 2060.0, 2075.8, 1581.8, 1065.6]
 #[230.0, 1585.0, 778.0, 1228.0, 2174.0, 1992.0, 1556.0, 953.0]
 #[155.0, 1240.0, 650.0, 1116.0, 1861.0, 1840.0, 1441.0, 962.0]
 #[152.0, 1190.0, 640.0, 1052.0, 1973.0, 1869.0, 1491.0, 936.0]
-#Cristal
+
+# Cristal
 #[446.0, 5427.0, 2128.0, 3736.0, 5074.0, 4721.0, 3038.0, 1754.0]
 #[443.0, 5481.0, 2142.0, 3755.0, 5097.0, 4750.0, 3047.0, 1766.0]
 #[440.0, 5651.0, 2196.0, 3822.0, 5179.0, 4819.0, 3081.0, 1794.0]
@@ -94,7 +108,8 @@ trigo_db = [159.2, 1328.8, 662.0, 1208.1, 2060.0, 2075.8, 1581.8, 1065.6]
 # -------------------------------------------------------------------
 
 # Base de datos para el maíz
-maiz_db = [237.0, 1701.1, 904.8, 1692.9, 3570.5, 3564.4, 2690.7, 1725.4]
+maiz_db = [245.0, 2041.85, 1036.85, 1781.6, 3382.75, 3404.25, 2522.4, 1536.85]
+#[237.0, 1701.1, 904.8, 1692.9, 3570.5, 3564.4, 2690.7, 1725.4] # Promedio muestras movimiento y cristal
 
 # Promedio estático =  [237.0, 1701.1, 904.8, 1692.9, 3570.5, 3564.4, 2690.7, 1725.4]
 # Promedio Maiz Total = [366.916666, 2734.458333, 1263.291666, 2405.625, 4256.416666, 4093.833333, 2992.75, 1759.791666]
@@ -135,7 +150,8 @@ maiz_db = [237.0, 1701.1, 904.8, 1692.9, 3570.5, 3564.4, 2690.7, 1725.4]
 
 # Base de datos para la poroto
 
-poroto_db = [151.1, 1129.2, 652.1, 1184.4, 2179.4, 2155.4, 1684.3, 1206.7]
+poroto_db = [177.8, 1629.6, 830.8, 1427.1, 2325.3, 2318.65, 1727.7, 1135.9]
+#[151.1, 1129.2, 652.1, 1184.4, 2179.4, 2155.4, 1684.3, 1206.7] # Promedio en movimiento y cristal 
 
 # Promedio muestras estáticas = [151.1, 1129.2, 652.1, 1184.4, 2179.4, 2155.4, 1684.3, 1206.7]
 # Promedio total = [303.538461, 2252.0, 1054.923076, 1984.230769, 3058.846153, 2878.961538, 2148.923076, 1331.538461]
@@ -177,24 +193,24 @@ poroto_db = [151.1, 1129.2, 652.1, 1184.4, 2179.4, 2155.4, 1684.3, 1206.7]
 # ------------------- Muestras mezcladas (50/50) --------------------
 
 # Base de datos para trigo/maiz
-trigomaiz_db = [201.2, 1613.7, 804.6, 1670.3, 2765.9, 2807.0, 2072.4, 1160.8]
+trigomaiz_db = [207.8, 1814.0, 919.4, 1558.1, 2796.0, 2781.85, 2096.25, 1317.2]
 
 # Base de datos para trigo/poroto
-trigoporoto_db = [158.1, 1233.3, 651.6, 1340.3, 2141.1, 2123.2, 1649.4, 954.2]
+trigoporoto_db = [176.8, 1646.5, 847.5, 1377.45, 2311.0, 2257.65, 1731.05, 1164.4]
 
 # Base de datos para maiz/poroto
-maizporoto_db = [184.0, 1203.3, 646.1, 1482.9, 2700.2, 2841.8, 2126.1, 1185.2]
+maizporoto_db = [208.5, 1799.8, 904.7, 1649.2, 2882.55, 2869.95, 2109.35, 1286.6]
 
 # Diccionario con las muestras puras
 muestraspuras_dic = {
 
-        "luz blanca": luzblanca_db,
+        # "luz blanca": luzblanca_db,
         "trigo": trigo_db,
         "maiz": maiz_db,
-        "poroto": poroto_db
-        # "poroto/maiz": maizporoto_db,
-        # "trigo/maiz": trigomaiz_db,
-        # "trigo/poroto": trigoporoto_db
+        "poroto": poroto_db,
+        "poroto/maiz": maizporoto_db,
+        "trigo/maiz": trigomaiz_db,
+        "trigo/poroto": trigoporoto_db
         
 }
 
