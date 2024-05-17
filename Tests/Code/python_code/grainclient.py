@@ -81,8 +81,8 @@ def enviar_estado(host, port, estado):
     try:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             s.connect((host, port))
-            s.sendall(mensaje.encode())
-            pritn("Mensaje enviado")
+            s.sendall(estado.encode())
+            print("Mensaje enviado")
             time.sleep(30)
 
     # Rutina para manejar errores
@@ -96,6 +96,8 @@ def main():
     server_address = (host, port)  # Enlaza el servidor a la dirección IP y puerto especificados
     client.connect(server_address)
 
+    estado_inicio = "Conexión establecida con el servidor"
+
     # Inicia el hilo para recibir datos periódicamente del servidor
     data_thread = threading.Thread(target=recibir_datos, args=(client,))
     data_thread.start()
@@ -104,20 +106,20 @@ def main():
     photo_thread = threading.Thread(target=recibir_foto, args=(host, port + 1))
     photo_thread.start()
 
-    report_thread = threading.Thread(target=enviar_estado, args=(host, port + 3, estado))
+    report_thread = threading.Thread(target=enviar_estado, args=(host, port + 3, estado_inicio))
     report_thread.start()
     
-    try:
-        while True:
-            command = client.recv(1024).decode()  # Recibe comando desde el servidor
-            if not command:
-                break
-            print("Command received:", command)
-            if command == "exit":
-                print("Closing connection...")
-                os._exit(0)
-            response = "Response to '{}'".format(command)  # Procesa el comando (placeholder)
-            client.send(response.encode())  # Envía respuesta al servidor    
+    # try:
+    #     while True:
+    #         command = client.recv(1024).decode()  # Recibe comando desde el servidor
+    #         if not command:
+    #             break
+    #         print("Command received:", command)
+    #         if command == "exit":
+    #             print("Closing connection...")
+    #             os._exit(0)
+    #         response = "Response to '{}'".format(command)  # Procesa el comando (placeholder)
+    #         client.send(response.encode())  # Envía respuesta al servidor
 
     except KeyboardInterrupt:
         print("Conexión Cerrada")
