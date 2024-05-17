@@ -32,12 +32,32 @@ sensor = AS7341(board.I2C())
 # Valores de Ganancia 
 #   Parámetro      ||   Valor
 # sensor.gain = 0  ||     0.5
-# sensor.gain = 1  ||
-# sensor.gain = 2  ||
-print(sensor.atime)
-print(sensor.astep)
-print(sensor.gain) #= 512
+# sensor.gain = 1  ||      1
+# sensor.gain = 2  ||      2
+# sensor.gain = 3  ||      4
+# sensor.gain = 4  ||      8
+# sensor.gain = 5  ||      16
+# sensor.gain = 6  ||      32
+# sensor.gain = 7  ||      64
+# sensor.gain = 8  ||      128
+# sensor.gain = 9  ||      256
+# sensor.gain = 10 ||      512
 
+# print(sensor.atime)
+# print(sensor.astep)
+# print(sensor.gain) #= 512
+
+# Sensor ATIME (Por defecto es 100)
+# sensor.atime = 29
+
+# Sensor ASTEP (Por defecto es 999)
+# sensor.astep = 599
+
+# Con ATIME = 29 y ASTEP = 599 se tiene t_int igual a 50ms
+# Con ATIME = 100 y ASTEP = 999 se tiene t_int igual a 280ms
+
+
+#sensor.gain = 10
 # Definición de contador total de muestras
 meassurement = 1
 

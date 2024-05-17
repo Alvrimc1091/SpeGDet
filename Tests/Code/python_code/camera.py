@@ -39,11 +39,15 @@ import io
 import logging
 import socketserver
 from http import server
+from gpiozero import LED
 from threading import Condition
+
 
 from picamera2 import Picamera2
 from picamera2.encoders import JpegEncoder
 from picamera2.outputs import FileOutput
+
+led_array = LED(17)
 
 # HTML page for the MJPEG streaming demo
 PAGE = """\
@@ -128,7 +132,9 @@ try:
     # Set up and start the streaming server
     address = ('', 8000)
     server = StreamingServer(address, StreamingHandler)
+    led_array.on()
     server.serve_forever()
 finally:
     # Stop recording when the script is interrupted
     picam2.stop_recording()
+    led_array.off()
