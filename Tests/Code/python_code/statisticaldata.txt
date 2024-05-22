@@ -7,11 +7,11 @@
 # Acertó en 100% de las veces
 
 # --- Porotos
-# N = 10 mediciones
+# N = 25 mediciones
 # Muestras en distintas "posiciones"
 # Acertó 100% de las veces
 
 # --- Maiz
-# N = 20 mediciones
+# N = 25 mediciones
 # Muestras en distintas "posiciones"
 # Acertó 100% de las veces

@@ -170,4 +170,18 @@ poroto_trigo_db = [
 promedio_columnas = calcular_promedio_columnas(maiz_db)
 print("Promedio de cada columna:", promedio_columnas)
 
+vector =  [44.24, 373.36, 174.68, 291.68, 472.0, 472.32, 352.6, 214.76, 1055.92, 57.04]
+[40.4, 322.48, 168.4, 288.8, 487.4, 492.76, 364.44, 236.44, 1059.04, 61.32]
+[54.65384615384615, 405.6923076923077, 208.6153846153846, 366.34615384615387, 716.0, 730.6923076923077, 532.0769230769231, 316.1923076923077, 1542.7692307692307, 89.42307692307692]
+
+def normalizar_vector(vector):
+    vector_np = np.array(vector)
+    magnitud = np.linalg.norm(vector_np)
+    if magnitud == 0:
+        return vector_np  # Evitar división por cero
+    return vector_np / magnitud
+
+vector_normalizado = normalizar_vector(vector)
+print(vector_normalizado)
+
     

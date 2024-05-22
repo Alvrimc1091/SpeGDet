@@ -9,6 +9,7 @@ import board
 import time
 import datetime
 import zoneinfo
+import numpy as np
 from gpiozero import LED
 import I2C_LCD_driver
 from adafruit_as7341 import AS7341
@@ -54,13 +55,14 @@ sensor.astep = 599
 # Con ATIME = 29 y ASTEP = 599 se tiene t_int igual a 50ms
 # Con ATIME = 100 y ASTEP = 999 se tiene t_int igual a 280ms
 
-
+# Sensor GAIN (Por defecto es 8 (128))
 sensor.gain = 8
+
 # Definición de contador total de muestras
 meassurement = 1
 
 # Definición del threshold
-threshold = 100
+threshold = 0.1
 
 # sensor.led = 
 
@@ -84,6 +86,7 @@ luzblanca_db = [770.8, 6034.7, 2179.6, 3800.3, 4651.4, 3841.8, 2659.8, 1182.7, 1
 
 # Base de datos para el trigo
 trigo_db =  [44.24, 373.36, 174.68, 291.68, 472.0, 472.32, 352.6, 214.76, 1055.92, 57.04]
+trigo_normalizado_db = [0.03134921, 0.26456922, 0.12378121, 0.20668939, 0.33446719, 0.33469395, 0.24985833, 0.15218257, 0.74824279, 0.04041951]
 #[178.71428571428572, 1705.0, 831.3333333333334, 1354.5714285714287, 2192.3333333333335, 2167.4761904761904, 1631.7619047619048, 1038.4761904761904, 1, 1]
 #[159.2, 1328.8, 662.0, 1208.1, 2060.0, 2075.8, 1581.8, 1065.6] # Promedio muestras movimiento y cristal
 
@@ -99,6 +102,7 @@ trigo_db =  [44.24, 373.36, 174.68, 291.68, 472.0, 472.32, 352.6, 214.76, 1055.9
 
 # Base de datos para el maíz
 maiz_db = [54.65384615384615, 405.6923076923077, 208.6153846153846, 366.34615384615387, 716.0, 730.6923076923077, 532.0769230769231, 316.1923076923077, 1542.7692307692307, 89.42307692307692]
+maiz_normalizado_db = [0.02678632, 0.19883325, 0.10224418, 0.17954937, 0.35091769, 0.35811852, 0.26077543, 0.15496854, 0.75612433, 0.04382701]
 #[245.0, 2041.85, 1036.85, 1781.6, 3382.75, 3404.25, 2522.4, 1536.85, 1, 1]
 #[237.0, 1701.1, 904.8, 1692.9, 3570.5, 3564.4, 2690.7, 1725.4] # Promedio muestras movimiento y cristal
 
@@ -112,6 +116,7 @@ maiz_db = [54.65384615384615, 405.6923076923077, 208.6153846153846, 366.34615384
 # Base de datos para la poroto
 
 poroto_db = [40.4, 322.48, 168.4, 288.8, 487.4, 492.76, 364.44, 236.44, 1059.04, 61.32]
+poroto_normalizado_db = [0.02848316, 0.22735768, 0.11872685, 0.20361231, 0.34363103, 0.34740998, 0.25694069, 0.16669701, 0.74665369, 0.04323237]
 #[177.8, 1629.6, 830.8, 1427.1, 2325.3, 2318.65, 1727.7, 1135.9, 1, 1]
 #[151.1, 1129.2, 652.1, 1184.4, 2179.4, 2155.4, 1684.3, 1206.7] # Promedio en movimiento y cristal 
 
@@ -226,18 +231,29 @@ def distancia_euclidiana(vector_db, vector_medido):
     distancia = math.sqrt(suma_cuadrados)
     return distancia
 
+def normalizar_vector(vector):
+    vector_np = np.array(vector)
+    magnitud = np.linalg.norm(vector_np)
+    if magnitud == 0:
+        return vector_np  # Evitar división por cero
+    return vector_np / magnitud
+
 def estimacion_grano(vector_db, vector_medida):
     hora_santiago = datetime.datetime.now(zona_santiago)
     distancias = {}
+
+    # Normalizar el vector de medida
+    vector_medida_normalizado = normalizar_vector(vector_medida)
+    print(f"Vector Medida Normalizado: {vector_medida_normalizado}")
     
     for grano, vector_referencia in vector_db.items():
-        distancia = distancia_euclidiana(vector_referencia, vector_medida)
+        # Normalizar el vector de referencia
+        vector_referencia_normalizado = normalizar_vector(vector_referencia)
+        #print(f"Vector de {grano} Normalizado: {vector_referencia_normalizado}")
+
+        distancia = distancia_euclidiana(vector_referencia_normalizado, vector_medida_normalizado)
         distancias[grano] = distancia
         print(f"Distancia euclidiana para {grano}: {distancia}")
-
-        # Calcular y print el vector normalizado
-        vector_normalizado = [valor / distancia for valor in vector_medida]
-        print(f"Vector normalizado para {grano}: {vector_normalizado}")
     
     grano_identificado = min(distancias, key=distancias.get)
     distancia_minima = distancias[grano_identificado]
