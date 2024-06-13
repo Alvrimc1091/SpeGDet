@@ -1,5 +1,5 @@
 #!/bin/bash
-sleep 3
+sleep 15
 
 # Directorio donde se generan los archivos
 source_dir="/home/pi/Data/Photos"
@@ -11,19 +11,23 @@ target_dir="/home/pi/SpeGDet/Photos"
 mv $source_dir/* $target_dir/
 
 # Mensaje de confirmación
-echo "Archivos movidos exitosamente."
+echo "Fotos movidas de manera correcta a las $('+%H:%M:%S')"
 
 # Mostrar mensaje en pantalla LCD
 # Importante: Asegúrate de ajustar la siguiente línea según tu configuración de LCD
 
 python3 - <<END
+
+import sys
+sys.path.append('/home/pi/Raspi-Confgs')
+
 import I2C_LCD_driver
 import time
 import datetime
 import zoneinfo
 
 # Directorio donde se encuentran los logs
-log_dir = "/home/pi/Raspi-Confgs/take_pictures.log"
+log_direc = "/home/pi/Raspi-Confgs/take_pictures.log"
 
 # Definición de pantalla LCD como variable "lcd"
 lcd = I2C_LCD_driver.lcd()
@@ -33,15 +37,15 @@ zona_santiago = zoneinfo.ZoneInfo("America/Santiago")
 hora_santiago = datetime.datetime.now(zona_santiago)
 
 # Rutina para mostrar mensaje
-
+#time.sleep(10)
 lcd.lcd_clear()
 lcd.lcd_display_string(f"[{hora_santiago.strftime('%H:%M:%S')}]", 1)
 lcd.lcd_display_string("Fotos Movidas", 2)
 time.sleep(3)
 lcd.lcd_clear()
 
-with open(log_dir, "a") as log_file:
-	log_file.write(f"Fotos movidas correctamente a las {hora_santiago}\n")
+with open(log_direc, "a") as log_file:
+	log_file.write(f"Fotos movidas a las {hora_santiago}\n")
 
 END
 
