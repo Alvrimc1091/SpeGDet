@@ -9,7 +9,6 @@ import I2C_LCD_driver
 from adafruit_as7341 import AS7341
 from picamera2 import Picamera2, Preview
 
-
 led_array = LED(17)
 lcd = I2C_LCD_driver.lcd()
 
@@ -47,7 +46,7 @@ def limpiar_pantalla(hora_santiago):
 def register_log():
 	hora_santiago = datetime.datetime.now(zona_santiago)
 	with open(log_register, "a") as log_file:
-		log_file.write(f"Script ejecutado a las {hora_santiago}\n")
+		log_file.write(f"Foto tomada a las {hora_santiago}\n")
 
 def main():
 	hora_santiago = datetime.datetime.now(zona_santiago)
