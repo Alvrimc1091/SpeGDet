@@ -15,11 +15,12 @@ lcd = I2C_LCD_driver.lcd()
 
 zona_santiago = zoneinfo.ZoneInfo("America/Santiago")
 
-
 picam2 = Picamera2()
 camera_config = picam2.create_preview_configuration()
 picam2.configure(camera_config)
 picam2.start_preview(Preview.NULL)
+
+log_register = "/home/pi/Raspi-Confgs/take_pictures.log"
 
 def tomar_foto():
 	try:
@@ -36,22 +37,28 @@ def tomar_foto():
 
 	except Exception as e:
 		print("Error al tomar la foto")
+		limpiar_pantalla(hora_santiago)
+		lcd.lcd_display_string("Error con foto", 2)
 		
 def limpiar_pantalla(hora_santiago):
 	lcd.lcd_clear()
-	lcd.lcd_display_string(f"Hora", 1)
+	lcd.lcd_display_string(f"[{hora_santiago.strftime('%H:%M:%S')}]", 1)
+
+def register_log():
+	hora_santiago = datetime.datetime.now(zona_santiago)
+	with open(log_register, "a") as log_file:
+		log_file.write(f"Script ejecutado a las {hora_santiago}\n")
 
 def main():
-	limpiar_pantalla(zona_santiago)
-	lcd.lcd_display_string("Tomando fotos", 2)
-	time.sleep(1)
-
+	hora_santiago = datetime.datetime.now(zona_santiago)
 	tomar_foto()
 	
-	limpiar_pantalla(zona_santiago)
-	lcd.lcd_display_string("Foto guardada", 2)
-	time.sleep(2)
+	limpiar_pantalla(hora_santiago)
+	lcd.lcd_display_string("Foto tomada", 2)
+	time.sleep(3)
+	lcd.lcd_clear()
+	
+	register_log()
 
 if __name__ == "__main__":
 	main()
-		
