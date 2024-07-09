@@ -77,9 +77,9 @@ picam2.start_preview(Preview.NULL)
 # ----------------------- Muestras (100%) ---------------------------
 
 # Base de datos para el maíz
-maiz_db = [54.65384615384615, 405.6923076923077, 208.6153846153846, 366.34615384615387, 716.0, 730.6923076923077, 532.0769230769231, 316.1923076923077, 1542.7692307692307, 89.42307692307692]
-poroto_db = [69.0, 375.0, 248.0, 427.0, 781.0, 800.0, 670.0, 387.0, 1456.0, 96.0]
-trigo_db = [45.0, 277.0, 165.0, 267.0, 456.0, 470.0, 395.0, 234.0, 1033.0, 63.0]
+maiz_db = [195.0, 1003.0, 732.0, 1438.0, 2079.0, 1631.0, 1242.0, 763.0, 2926.0, 194.0]
+poroto_db = [147.0, 742.0, 606.0, 1177.0, 1517.0, 1086.0, 847.0, 577.0, 2085.0, 139.0]
+trigo_db = [139.0, 742.0, 592.0, 1113.0, 1387.0, 964.0, 764.0, 530.0, 2001.0, 128.0]
 
 # Diccionario con las muestras puras
 muestraspuras_dic = {
@@ -216,7 +216,7 @@ def guardar_datos(datos, foto_id, hora_santiago):
     fecha_hora = datetime.datetime.now().strftime("%Y-%m-%d,%H:%M:%S")
 
     #with open(f"/home/pi/SpeGDet/Tests/DataProto2/data_proto2{hora_santiago.strftime('%H%M%S_%d%m%Y')}.csv", mode='a', newline='') as archivo_csv:
-    with open(f"/home/pi/SpeGDet/Tests/DataProto2/DataTrigo/data_proto2.csv", mode='a', newline='') as archivo_csv:
+    with open(f"/home/pi/SpeGDet/Tests/DataProto2/DataMaiz/DataShakeMaiz/data_proto2.csv", mode='a', newline='') as archivo_csv:
         escritor_csv = csv.writer(archivo_csv)
         escritor_csv.writerow([fecha_hora] + datos)
 
@@ -225,7 +225,7 @@ def tomar_foto():
         picam2.start()    
         hora_santiago = datetime.datetime.now(zona_santiago)
         #nombre_foto = f"/home/pi/SpeGDet/Tests/DataProto2/foto_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
-        nombre_foto = f"/home/pi/SpeGDet/Tests/DataProto2/DataTrigo/foto_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
+        nombre_foto = f"/home/pi/SpeGDet/Tests/DataProto2/DataMaiz/DataShakeMaiz/foto_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
         fecha_hora_actual = hora_santiago.strftime("%H%M%S_%d%m%Y")
         
         picam2.capture_file(nombre_foto)
@@ -266,22 +266,49 @@ def main():
     # Rutina para tomar datos y foto
     # Toma los datos e inmediatamente la foto
 
-    # Ejecutar mostrar_datos varias veces para agregar datos a la matriz
-    for _ in range(meassurement):
-        led_array.on()
-        sensor.led_current = 30
-        #sensor.led = True
-        datos_medida_final.append(mostrar_datos())
+    while True:
+            command = input("Ingrese comando (m para medir, q para salir): ")
+            
+            if command.lower() == 'm':
+                for _ in range(meassurement):
+                    led_array.on()
+                    time.sleep(1)
+                    #sensor.led_current = 30
+                    datos_medida_final.append(mostrar_datos())
+                
+                tomar_foto()
+                led_array.off()
+
+                print("Medida tomada:", datos_medida_final[-1:])
+                # Promediar las columnas de los datos totales
+                resultados = promedio_datos_medida(*datos_medida_final)
+                print("Promedio de cada columna:", resultados)
+
+                ejecutar_estimacion_grano(resultados)
+            
+            elif command.lower() == 'q':
+                print("Saliendo del programa...")
+                break
+            
+            else:
+                print("Comando no reconocido. Intente nuevamente.")
+
+    # # Ejecutar mostrar_datos varias veces para agregar datos a la matriz
+    # for _ in range(meassurement):
+    #     led_array.on()
+    #     sensor.led_current = 30
+    #     #sensor.led = True
+    #     datos_medida_final.append(mostrar_datos())
     
-    tomar_foto()
-    sensor.led = False
-    led_array.off()
+    # tomar_foto()
+    # #sensor.led = False
+    # led_array.off()
 
-    # promedio las columnas de los datos totales
-    resultados = promedio_datos_medida(*datos_medida_final)
-    print("Promedio de cada columna:", resultados)
+    # # promedio las columnas de los datos totales
+    # resultados = promedio_datos_medida(*datos_medida_final)
+    # print("Promedio de cada columna:", resultados)
 
-    ejecutar_estimacion_grano(resultados)
+    # ejecutar_estimacion_grano(resultados)
 
 if __name__ == "__main__":
     main()
