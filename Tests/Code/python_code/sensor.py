@@ -216,7 +216,8 @@ def guardar_datos(datos, foto_id, hora_santiago):
     fecha_hora = datetime.datetime.now().strftime("%Y-%m-%d,%H:%M:%S")
 
     #with open(f"/home/pi/SpeGDet/Tests/DataProto2/data_proto2{hora_santiago.strftime('%H%M%S_%d%m%Y')}.csv", mode='a', newline='') as archivo_csv:
-    with open(f"/home/pi/SpeGDet/Tests/DataProto2/DataTrigo/DataPureTrigo/data_proto2.csv", mode='a', newline='') as archivo_csv:
+    
+    with open(f"/home/pi/SpeGDet/Tests/DataProto2/DataEmpty/DataCleanEmpty/data_proto2.csv", mode='a', newline='') as archivo_csv:
         escritor_csv = csv.writer(archivo_csv)
         escritor_csv.writerow([fecha_hora] + datos)
 
@@ -225,7 +226,7 @@ def tomar_foto():
         picam2.start()    
         hora_santiago = datetime.datetime.now(zona_santiago)
         #nombre_foto = f"/home/pi/SpeGDet/Tests/DataProto2/foto_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
-        nombre_foto = f"/home/pi/SpeGDet/Tests/DataProto2/DataTrigo/DataPureTrigo/foto_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
+        nombre_foto = f"/home/pi/SpeGDet/Tests/DataProto2/DataEmpty/DataCleanEmpty/foto_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
         fecha_hora_actual = hora_santiago.strftime("%H%M%S_%d%m%Y")
         
         picam2.capture_file(nombre_foto)
@@ -244,6 +245,8 @@ def tomar_foto():
 
 def main():
     
+    print("Tomando datos de Empty")
+
     # Definición del vector de datos totales de la medida
     datos_medida_final = []
 
@@ -271,8 +274,17 @@ def main():
             
             if command.lower() == 'm':
                 for _ in range(meassurement):
-                    led_array.on()
                     time.sleep(1)
+                    led_array.on()
+                    led_red.on()
+                    led_blue.on()
+                    led_green.on()
+                    led_yellow.on()
+                    time.sleep(1)
+                    led_red.off()
+                    led_blue.off()
+                    led_green.off()
+                    led_yellow.off()
                     #sensor.led_current = 30
                     datos_medida_final.append(mostrar_datos())
                 
