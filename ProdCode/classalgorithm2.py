@@ -1,19 +1,15 @@
-# Script para generar los reportes y matrices de confusión de los modelos
+# Script para guardar los modelos en un archivo con extensión .pkl
 import pandas as pd
-import re
 import numpy as np
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, ConfusionMatrixDisplay
-import matplotlib.pyplot as plt
+import pickle
+import re
 import warnings
 from sklearn.exceptions import ConvergenceWarning
-import matplotlib
-
-# Configurar el backend para Matplotlib
-matplotlib.use('Agg')  # Usar el backend 'Agg' para la visualización en entornos headless
 
 # Ignorar advertencias de convergencia
 warnings.filterwarnings("ignore", category=ConvergenceWarning)
@@ -63,10 +59,6 @@ for key, path in file_paths.items():
 # Combinar todos los dataframes en uno solo
 df_combined = pd.concat(dfs, ignore_index=True)
 
-# Verificar la forma del DataFrame combinado
-print("Forma del DataFrame combinado:", df_combined.shape)
-print("Primeras filas del DataFrame combinado:\n", df_combined.head())
-
 # Función para limpiar y extraer valores numéricos
 def clean_and_extract(df):
     df_cleaned = df.apply(lambda row: pd.Series(extract_numeric_values(row)), axis=1)
@@ -87,7 +79,6 @@ df_cleaned['label'] = df_combined['label']
 
 # Normalizar cada fila de características
 normalized_features = df_cleaned.iloc[:, :-1].apply(lambda row: normalizar_vector(row), axis=1)
-print("Primeras filas del DataFrame combinado:\n", normalized_features.head())
 
 # Crear un DataFrame con los datos normalizados
 df_normalized = pd.DataFrame(normalized_features.tolist(), index=df_cleaned.index)
@@ -124,98 +115,28 @@ def compute_class_centroids(X_train, y_train):
         centroids[label] = normalizar_vector(centroid)
     return centroids
 
-# Calcular la distancia euclidiana entre dos vectores
-def euclidean_distance(vector1, vector2):
-    return np.linalg.norm(vector1 - vector2)
-
-# Clasificación basada en la distancia euclidiana
-def classify_euclidean(X_test, centroids):
-    y_pred = []
-    for x in X_test:
-        distances = {label: euclidean_distance(x, centroid) for label, centroid in centroids.items()}
-        y_pred.append(min(distances, key=distances.get))
-    return np.array(y_pred)
-
 # Calcular los centroides de clase
 centroids = compute_class_centroids(X_train, y_train)
 
-# Realizar la clasificación basada en distancia euclidiana
-y_pred_euclidean = classify_euclidean(X_test, centroids)
-euclidean_accuracy = accuracy_score(y_test, y_pred_euclidean)
-print(f'Euclidean Distance Accuracy: {euclidean_accuracy:.2f}')
-
-# Hiperparámetros óptimos para RandomForest y LogisticRegression
-rf_params = {'max_depth': None, 'min_samples_split': 2, 'n_estimators': 50}
-lr_params = {'C': 100, 'max_iter': 500, 'penalty': 'l1', 'solver': 'liblinear'}
-
-# Crear y entrenar el modelo de RandomForest con validación cruzada
-rf_model = RandomForestClassifier(**rf_params, random_state=42)
+# Crear y entrenar el modelo de RandomForest
+rf_model = RandomForestClassifier(max_depth=None, min_samples_split=2, n_estimators=50, random_state=42)
 rf_model.fit(X_train, y_train)
 
-# Validación cruzada para RandomForest
-rf_cv_scores = cross_val_score(rf_model, X_train, y_train, cv=10)
-print(f'Random Forest Cross-Validation Accuracy: {rf_cv_scores.mean():.2f} ± {rf_cv_scores.std():.2f}')
-
-# Crear y entrenar el modelo de LogisticRegression con validación cruzada
-lr_model = LogisticRegression(**lr_params, random_state=42)
+# Crear y entrenar el modelo de LogisticRegression
+lr_model = LogisticRegression(C=100, max_iter=500, penalty='l1', solver='liblinear', random_state=42)
 lr_model.fit(X_train, y_train)
 
-# Matriz de confusión y reporte de clasificación para Euclidean Distance
-ed_cm = confusion_matrix(y_test, y_pred_euclidean)
-ed_cr = classification_report(y_test, y_pred_euclidean)
-print("Euclidean Distance Confusion Matrix:\n", ed_cm)
-print("Euclidean Distance Classification Report:\n", ed_cr)
+# Guardar los modelos y centroides
+with open('rf_model.pkl', 'wb') as file:
+    pickle.dump(rf_model, file)
 
-# Mostrar la matriz de confusión para la distancia euclidiana
-fig, ax = plt.subplots()
-ConfusionMatrixDisplay(confusion_matrix=ed_cm, display_labels=np.unique(y_train)).plot(ax=ax)
-plt.title("Euclidean Distance Confusion Matrix")
-plt.savefig('euclidean_distance_cm.png')  # Guardar la imagen en lugar de mostrarla
-plt.close()
+with open('lr_model.pkl', 'wb') as file:
+    pickle.dump(lr_model, file)
 
-# Validación cruzada para LogisticRegression
-lr_cv_scores = cross_val_score(lr_model, X_train, y_train, cv=10)
-print(f'Logistic Regression Cross-Validation Accuracy: {lr_cv_scores.mean():.2f} ± {lr_cv_scores.std():.2f}')
+with open('centroids.pkl', 'wb') as file:
+    pickle.dump(centroids, file)
 
-# Realizar predicciones y evaluar el modelo de RandomForest
-y_pred_rf = rf_model.predict(X_test)
-rf_accuracy = accuracy_score(y_test, y_pred_rf)
-print(f'Random Forest Accuracy: {rf_accuracy:.2f}')
+with open('scaler.pkl', 'wb') as file:
+    pickle.dump(scaler, file)
 
-# Matriz de confusión y reporte de clasificación para RandomForest
-rf_cm = confusion_matrix(y_test, y_pred_rf)
-rf_cr = classification_report(y_test, y_pred_rf)
-print("Random Forest Confusion Matrix:\n", rf_cm)
-print("Random Forest Classification Report:\n", rf_cr)
-
-# Mostrar la matriz de confusión para RandomForest
-fig, ax = plt.subplots()
-ConfusionMatrixDisplay(confusion_matrix=rf_cm, display_labels=rf_model.classes_).plot(ax=ax)
-plt.title("Random Forest Confusion Matrix")
-plt.savefig('random_forest_cm.png')  # Guardar la imagen en lugar de mostrarla
-plt.close()
-
-# Realizar predicciones y evaluar el modelo de LogisticRegression
-y_pred_lr = lr_model.predict(X_test)
-lr_accuracy = accuracy_score(y_test, y_pred_lr)
-print(f'Logistic Regression Accuracy: {lr_accuracy:.2f}')
-
-# Probabilidades de pertenencia a cada clase
-y_proba_lr = lr_model.predict_proba(X_test)
-proba_df = pd.DataFrame(y_proba_lr, columns=lr_model.classes_)
-proba_df['predicted'] = y_pred_lr
-proba_df['actual'] = y_test
-print("Probabilidades de pertenencia a cada clase para Logistic Regression:\n", proba_df.head())
-
-# Matriz de confusión y reporte de clasificación para LogisticRegression
-lr_cm = confusion_matrix(y_test, y_pred_lr)
-lr_cr = classification_report(y_test, y_pred_lr)
-print("Logistic Regression Confusion Matrix:\n", lr_cm)
-print("Logistic Regression Classification Report:\n", lr_cr)
-
-# Mostrar la matriz de confusión para LogisticRegression
-fig, ax = plt.subplots()
-ConfusionMatrixDisplay(confusion_matrix=lr_cm, display_labels=lr_model.classes_).plot(ax=ax)
-plt.title("Logistic Regression Confusion Matrix")
-plt.savefig('logistic_regression_cm.png')  # Guardar la imagen en lugar de mostrarla
-plt.close()
+print("Modelos y centroides guardados exitosamente.")

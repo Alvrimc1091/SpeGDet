@@ -112,7 +112,7 @@ def mostrar_datos():
     hora_santiago = datetime.datetime.now(zona_santiago)
     datos_str = ",".join(map(str, datos))
     foto_id = f"foto_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
-    #guardar_datos(datos_str, foto_id, hora_santiago)
+    guardar_datos(datos_str, foto_id, hora_santiago)
     return datos
 
 def promedio_datos_medida(*filas):
@@ -204,40 +204,29 @@ def main():
 
     # Rutina para tomar datos y foto
     # Toma los datos e inmediatamente la foto
-
-    while True:
-            command = input("Ingrese comando (m para medir, q para salir): ")
-            
-            if command.lower() == 'm':
-                for _ in range(meassurement):
-                    time.sleep(1)
-                    led_array.on()
-                    led_red.on()
-                    led_blue.on()
-                    led_green.on()
-                    led_yellow.on()
-                    time.sleep(1)
-                    led_red.off()
-                    led_blue.off()
-                    led_green.off()
-                    led_yellow.off()
-                    #sensor.led_current = 30
-                    datos_medida_final.append(mostrar_datos())
+   
+    for _ in range(meassurement):
+        time.sleep(1)
+        led_array.on()
+        led_red.on()
+        led_blue.on()
+        led_green.on()
+        led_yellow.on()
+        time.sleep(1)
+        led_red.off()
+        led_blue.off()
+        led_green.off()
+        led_yellow.off()
+        #sensor.led_current = 30
+        datos_medida_final.append(mostrar_datos())
                 
-                #tomar_foto()
-                led_array.off()
+    tomar_foto()
+    led_array.off()
 
-                print("Medida tomada:", datos_medida_final[-1:])
-                # Promediar las columnas de los datos totales
-                resultados = promedio_datos_medida(*datos_medida_final)
-                print("Promedio de cada columna:", resultados)
-            
-            elif command.lower() == 'q':
-                print("Saliendo del programa...")
-                break
-            
-            else:
-                print("Comando no reconocido. Intente nuevamente.")
-
+    print("Medida tomada:", datos_medida_final[-1:])
+    # Promediar las columnas de los datos totales
+    resultados = promedio_datos_medida(*datos_medida_final)
+    print("Promedio de cada columna:", resultados)
+        
 if __name__ == "__main__":
     main()
