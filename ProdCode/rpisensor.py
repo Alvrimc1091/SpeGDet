@@ -10,6 +10,7 @@ import time
 import datetime
 import zoneinfo
 import numpy as np
+import pandas as pd
 from gpiozero import LED
 from adafruit_as7341 import AS7341
 from picamera2 import Picamera2, Preview
@@ -17,10 +18,10 @@ from picamera2 import Picamera2, Preview
 # Definición del arreglo de LEDs
 led_array = LED(17) # LEDs de iluminación para el sensor
 
-led_red = LED(5) # Rojo
-led_green = LED(6) # Verde
-led_blue = LED(22) # Azul
-led_yellow = LED(27) # Amarillo
+# led_red = LED(5) # Rojo
+# led_green = LED(6) # Verde
+# led_blue = LED(22) # Azul
+# led_yellow = LED(27) # Amarillo
 
 # Zona horaria
 zona_santiago = zoneinfo.ZoneInfo("America/Santiago")
@@ -189,34 +190,13 @@ def main():
     hora_santiago = datetime.datetime.now(zona_santiago)
 
     # Comienza recopilando los datos de la muestra
-    led_red.on()
-    time.sleep(0.2)
-    led_red.off()
-    led_green.on()
-    time.sleep(0.2)
-    led_green.off()
-    led_yellow.on()
-    time.sleep(0.2)
-    led_yellow.off()
-    led_blue.on()
-    time.sleep(0.2)
-    led_blue.off()
 
     # Rutina para tomar datos y foto
     # Toma los datos e inmediatamente la foto
    
     for _ in range(meassurement):
-        time.sleep(1)
+        time.sleep(0.8)
         led_array.on()
-        led_red.on()
-        led_blue.on()
-        led_green.on()
-        led_yellow.on()
-        time.sleep(1)
-        led_red.off()
-        led_blue.off()
-        led_green.off()
-        led_yellow.off()
         #sensor.led_current = 30
         datos_medida_final.append(mostrar_datos())
                 

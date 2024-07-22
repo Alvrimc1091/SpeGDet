@@ -4,6 +4,23 @@ import pickle
 import re
 import time
 
+# import os
+# import sys
+# import time
+# from gpiozero import LED, GPIOPinInUse
+
+# led_red = LED(5) # Rojo
+# led_green = LED(6) # Verde
+# led_blue = LED(22) # Azul
+# led_yellow = LED(27) # Amarillo
+
+# def encender_led(led):
+#     """Enciende un LED durante 2 segundos."""
+#     if led is not None:
+#         led.on()
+#         time.sleep(2)
+#         led.off()
+
 # Cargar los modelos y centroides
 with open('rf_model.pkl', 'rb') as file:
     rf_model = pickle.load(file)
@@ -70,6 +87,10 @@ def extract_numeric_values(row):
 
 # Función principal para predecir el grano desde el archivo CSV
 def predict_grain_from_csv(csv_file_path):
+    
+    # Diccionario para guardar las predicciones
+    predictions = {'euclidean': None, 'logistic_regression': None, 'random_forest': None}
+
     # Leer el archivo CSV
     df = pd.read_csv(csv_file_path, header=None, delimiter=',')
     
@@ -96,18 +117,42 @@ def predict_grain_from_csv(csv_file_path):
     start_time = time.time()
     class_euclidean = classify_euclidean(vector_normalized, centroids)
     end_time = time.time()
+    predictions['euclidean'] = {'predicted_class': class_euclidean}
     print(f"Tiempo de predicción usando distancia euclidiana: {end_time - start_time:.4f} segundos")
     print("Predicción usando distancia euclidiana:", class_euclidean)
     
     # Predicción usando Logistic Regression
     predicted_class_lr, proba_lr = predict_lr(vector_normalized)
+    predictions['logistic_regression'] = {'predicted_class': predicted_class_lr, 'probabilities': proba_lr}
     print("Predicción usando Logistic Regression:", predicted_class_lr)
     print(f"Probabilidades de pertenencia a cada clase (Logistic Regression): \nMaiz: {proba_lr[0]},\nTrigo: {proba_lr[1]},\nPoroto: {proba_lr[2]},\nNada: {proba_lr[3]} ")
     
     # Predicción usando Random Forest
     predicted_class_rf = predict_rf(vector_normalized)
+    predictions['random_forest'] = {'predicted_class': predicted_class_rf}
     print("Predicción usando Random Forest:", predicted_class_rf)
 
+    return predictions
+
 # Ruta del archivo CSV
-csv_file_path = "/home/pi/SpeGDet/DataMeassures/DataSensor/data_sensor.csv"
-predict_grain_from_csv(csv_file_path)
+# csv_file_path = "/home/pi/SpeGDet/DataMeassures/DataSensor/data_sensor.csv"
+# predictions = predict_grain_from_csv(csv_file_path)
+
+# def manejar_prediccion(prediccion):
+#     """Maneja la predicción encendiendo el LED correspondiente."""
+#     if predictions['logistic_regression']['predicted_class'] == 'poroto':
+#         encender_led(led_blue)
+#         print('poroto')
+
+#     elif predictions['logistic_regression']['predicted_class'] == 'maiz':
+#         encender_led(led_yellow)
+#         print('maiz')
+
+#     elif predictions['logistic_regression']['predicted_class'] == 'trigo':
+#         encender_led(led_green)
+#         print('trigo')
+#     else:
+#         encender_led(led_red)  # Alerta para casos no reconocidos
+
+# manejar_prediccion(predictions) 
+#print("Todas las predicciones:", predictions['euclidean']['predicted_class'])
