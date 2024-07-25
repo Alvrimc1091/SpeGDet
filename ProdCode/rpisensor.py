@@ -61,9 +61,9 @@ threshold = 0.2
 
 # Configuración inicial de la cámara
 picam2 = Picamera2()
-camera_config = picam2.create_preview_configuration() 
-picam2.configure(camera_config) 
-picam2.start_preview(Preview.NULL)
+# camera_config = picam2.create_preview_configuration() 
+# picam2.configure(camera_config) 
+# picam2.start_preview(Preview.NULL)
 
 # -------------------------------------------------------------------
 # ----------------------- Definición de funciones -------------------
@@ -136,13 +136,6 @@ def promedio_datos_medida(*filas):
 
     return promedios_columnas
 
-def normalizar_vector(vector):
-    vector_np = np.array(vector)
-    magnitud = np.linalg.norm(vector_np)
-    if magnitud == 0:
-        return vector_np  # Evitar división por cero
-    return vector_np / magnitud
-
 def guardar_datos(datos, foto_id, hora_santiago):
 
     # print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Datos del sensor guardados")
@@ -169,10 +162,11 @@ def tomar_foto():
         fecha_hora_actual = hora_santiago.strftime("%H%M%S_%d%m%Y")
         
         picam2.capture_file(nombre_foto)
-        time.sleep(2)
+        picam2.close()
+        # time.sleep(2)
 
-        with open(nombre_foto, "rb") as f:
-            data = f.read()
+        # with open(nombre_foto, "rb") as f:
+        #     data = f.read()
            # print(f"[{hora_santiago.strftime('%H:%M:%S de %d/%m/%Y')}] --- Foto {nombre_foto} guardada")        
         
         # Guardar información de la foto en el archivo CSV
@@ -193,16 +187,23 @@ def main():
 
     # Rutina para tomar datos y foto
     # Toma los datos e inmediatamente la foto
-   
+    print("Cámara Inicializada")
+
+    print("Iniciando toma de foto y datos de la muestra")
+    led_array.on()
+    time.sleep(1)
+    
     for _ in range(meassurement):
-        time.sleep(0.8)
-        led_array.on()
         #sensor.led_current = 30
         datos_medida_final.append(mostrar_datos())
-                
+
+    print("Datos tomados")
     tomar_foto()
+
+    print("Foto tomada")
     led_array.off()
 
+    print("Mostrando datos a continuación")
     print("Medida tomada:", datos_medida_final[-1:])
     # Promediar las columnas de los datos totales
     resultados = promedio_datos_medida(*datos_medida_final)

@@ -7,6 +7,12 @@ import zoneinfo
 import pandas as pd
 from led_functions import encender_led, secuencia_led_inicializacion, blink_leds, led_blue, led_red, led_yellow, led_green
 
+# Importar la función main de rpisensor
+from rpisensor import main as rpisensor_main
+
+# Importar la función predict_grain_from_csv de grainclass
+from grainclass import predict_grain_from_csv
+
 # Zona horaria
 zona_santiago = zoneinfo.ZoneInfo("America/Santiago")
 
@@ -17,11 +23,7 @@ zona_santiago = zoneinfo.ZoneInfo("America/Santiago")
 current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, current_dir)
 
-# Importar la función main de rpisensor
-from rpisensor import main as rpisensor_main
 
-# Importar la función predict_grain_from_csv de grainclass
-from grainclass import predict_grain_from_csv
 
 # Definir la ruta del archivo CSV
 csv_file_path = "/home/pi/SpeGDet/DataMeassures/DataSensor/data_sensor.csv"
@@ -62,6 +64,12 @@ def manejar_prediccion(predictions):
     elif predictions['logistic_regression']['predicted_class'] == 'maiz':
         encender_led(led_yellow)
         #print('maiz')
+    
+    elif predictions['logistic_regression']['predicted_class'] == 'empty':
+        encender_led(led_red)
+        encender_led(led_yellow)
+        encender_led(led_green)
+        encender_led(led_blue)
 
     elif predictions['logistic_regression']['predicted_class'] == 'trigo':
         encender_led(led_green)
@@ -73,22 +81,34 @@ def main():
     # Ejecutar la función main de rpisensor.py
     timevar = 0.2
     times = 3
-
+    
+    print("Inicializando secuencia de leds")
     secuencia_led_inicializacion(timevar)
+
+    print("Iniciando script de toma de datos: rpisensor\n")
     rpisensor_main()
-    blink_leds(times)
+    print("Finalizando script de toma de datos: rpisensor\n")
+
+    # blink_leds(times)
     
     # Obtener la última fila del archivo CSV para usar los mismos datos y hora
+    print("Buscando dentro del archivo de toma de datos generado por rpisensor...")
     fecha_hora, datos, foto_id = obtener_ultima_fila(csv_file_path)
+    print("Datos Encontrados")
     
     # Realizar la predicción
+    print("Iniciando script de clasificación del tipo de grano: grainclass")
     predictions = predict_grain_from_csv(csv_file_path)
-    
+    print("Finalizando script de clasificación del tipo de grano")
+
+    print("Mostrando resultados obtenidos de la muestra: graindetector")
     # Manejar la predicción encendiendo el LED adecuado
     manejar_prediccion(predictions)
     
+    print("Guardando los datos de la predicción en predicciones.csv")
     # Guardar los datos y las predicciones en el nuevo archivo CSV
     guardar_predicciones(fecha_hora, datos, foto_id, predictions)
+    print("Funcionando")
 
 if __name__ == "__main__":
     main()

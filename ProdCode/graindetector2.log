@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/home/pi/SpeGDet/ProdCode/graindetector2.py", line 4, in <module>
+    from led_functions import encender_led, secuencia_led_inicializacion, blink_leds, led_blue, led_red, led_yellow, led_green
+  File "/home/pi/SpeGDet/ProdCode/led_functions.py", line 12, in <module>
+    import pandas as pd
+  File "/usr/local/lib/python3.11/dist-packages/pandas/__init__.py", line 49, in <module>
+    from pandas.core.api import (
+  File "/usr/local/lib/python3.11/dist-packages/pandas/core/api.py", line 28, in <module>
+    from pandas.core.arrays import Categorical
+  File "/usr/local/lib/python3.11/dist-packages/pandas/core/arrays/__init__.py", line 1, in <module>
+    from pandas.core.arrays.arrow import ArrowExtensionArray
+  File "/usr/local/lib/python3.11/dist-packages/pandas/core/arrays/arrow/__init__.py", line 5, in <module>
+    from pandas.core.arrays.arrow.array import ArrowExtensionArray
+  File "/usr/local/lib/python3.11/dist-packages/pandas/core/arrays/arrow/array.py", line 65, in <module>
+    from pandas.core.arrays.string_ import StringDtype
+  File "/usr/local/lib/python3.11/dist-packages/pandas/core/arrays/string_.py", line 48, in <module>
+    from pandas.core.arrays.numpy_ import NumpyExtensionArray
+  File "/usr/local/lib/python3.11/dist-packages/pandas/core/arrays/numpy_.py", line 29, in <module>
+    from pandas.core.strings.object_array import ObjectStringArrayMixin
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1032, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1130, in get_data
+KeyboardInterrupt
