@@ -1,7 +1,7 @@
 import ftplib
 
 # FTP server details
-ftp_server = "127.0.0.1"
+ftp_server = "192.168.0.50"
 username = "aimc"
 password = "qwerty"
 port = 2121
