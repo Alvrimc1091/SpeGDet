@@ -162,7 +162,7 @@ def tomar_foto():
         fecha_hora_actual = hora_santiago.strftime("%H%M%S_%d%m%Y")
         
         picam2.capture_file(nombre_foto)
-        picam2.close()
+        #picam2.close()
         # time.sleep(2)
 
         # with open(nombre_foto, "rb") as f:

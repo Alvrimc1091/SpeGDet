@@ -217,7 +217,7 @@ def guardar_datos(datos, foto_id, hora_santiago):
 
     #with open(f"/home/pi/SpeGDet/Tests/DataProto2/data_proto2{hora_santiago.strftime('%H%M%S_%d%m%Y')}.csv", mode='a', newline='') as archivo_csv:
     
-    with open(f"/home/pi/SpeGDet/Tests/DataProto2/DataPoroto/DataShakePoroto/data_proto2.csv", mode='a', newline='') as archivo_csv:
+    with open(f"/home/pi/SpeGDet/Tests/DataProto2/DataEmpty/DataTestEmpty/data_proto2.csv", mode='a', newline='') as archivo_csv:
         escritor_csv = csv.writer(archivo_csv)
         escritor_csv.writerow([fecha_hora] + datos)
 
@@ -226,7 +226,7 @@ def tomar_foto():
         picam2.start()    
         hora_santiago = datetime.datetime.now(zona_santiago)
         #nombre_foto = f"/home/pi/SpeGDet/Tests/DataProto2/foto_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
-        nombre_foto = f"/home/pi/SpeGDet/Tests/DataProto2/DataPoroto/DataShakePoroto/foto_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
+        nombre_foto = f"/home/pi/SpeGDet/Tests/DataProto2/DataEmpty/DataTestEmpty/foto_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
         fecha_hora_actual = hora_santiago.strftime("%H%M%S_%d%m%Y")
         
         picam2.capture_file(nombre_foto)

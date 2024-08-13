@@ -116,6 +116,7 @@ def predict_lr(vector):
     predicted_class = lr_model.predict(vector_scaled)[0]
     end_time = time.time()  # Detener temporizador
     print(f"Tiempo de predicción con Logistic Regression: {end_time - start_time:.4f} segundos")
+    print(lr_model.classes_)
     return predicted_class, proba[0]
 
 # Función para realizar la predicción con Random Forest
@@ -171,7 +172,7 @@ def predict_grain_from_csv(csv_file_path):
     predicted_class_lr, proba_lr = predict_lr(vector_normalized)
     predictions['logistic_regression'] = {'predicted_class': predicted_class_lr, 'probabilities': proba_lr}
     print("Predicción usando Logistic Regression:", predicted_class_lr)
-    print(f"Probabilidades de pertenencia a cada clase (Logistic Regression): \nMaiz: {proba_lr[0]},\nTrigo: {proba_lr[1]},\nPoroto: {proba_lr[2]},\nNada: {proba_lr[3]} ")
+    print(f"Probabilidades de pertenencia a cada clase (Logistic Regression): \nMaiz: {proba_lr[1]},\nTrigo: {proba_lr[3]},\nPoroto: {proba_lr[2]},\nNada: {proba_lr[0]} ")
     
     # Predicción usando Random Forest
     predicted_class_rf = predict_rf(vector_normalized)
@@ -191,23 +192,29 @@ def predict_grain_from_csv(csv_file_path):
 def main():
     # Ejecutar la función main de rpisensor.py
     timevar = 0.2
-    times = 3
-
+    times = 2
     secuencia_led_inicializacion(timevar)
-    rpisensor_main()
-    blink_leds(times)
+    time.sleep(1)
 
-    # Obtener la última fila del archivo CSV para usar los mismos datos y hora
-    fecha_hora, datos, foto_id = obtener_ultima_fila(csv_file_path)
-    
-    # Realizar la predicción
-    predictions = predict_grain_from_csv(csv_file_path)
+    while True:
 
-    # Manejar la predicción encendiendo el LED adecuado
-    manejar_prediccion(predictions)
-    
-    # Guardar los datos y las predicciones en el nuevo archivo CSV
-    guardar_predicciones(fecha_hora, datos, foto_id, predictions)
+        blink_leds(times)
+        time.sleep(1)
+        rpisensor_main()       
+
+        # Obtener la última fila del archivo CSV para usar los mismos datos y hora
+        fecha_hora, datos, foto_id = obtener_ultima_fila(csv_file_path)
+        
+        # Realizar la predicción
+        predictions = predict_grain_from_csv(csv_file_path)
+
+        # Manejar la predicción encendiendo el LED adecuado
+        manejar_prediccion(predictions)
+        
+        # Guardar los datos y las predicciones en el nuevo archivo CSV
+        guardar_predicciones(fecha_hora, datos, foto_id, predictions)
+
+        time.sleep(5)
 
 if __name__ == "__main__":
     main()

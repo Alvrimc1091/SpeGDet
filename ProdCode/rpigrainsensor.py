@@ -220,7 +220,7 @@ def tomar_foto():
         picam2.capture_file(nombre_foto)
         print("tomar_foto: foto capturada")
         print("tomar_foto: cerrando picam")
-        picam2.close()
+        # picam2.close()
         print("tomar_foto: picamcerrada")
 
         # Devuelve el nombre del archivo para su uso posterior
@@ -262,6 +262,9 @@ async def manejar_prediccion(predictions):
         encender_led(led_green)
         #print('trigo')
     else:
+        encender_led(led_blue)
+        encender_led(led_yellow)
+        encender_led(led_green)
         encender_led(led_red)  # Alerta para casos no reconocidos
 
 def obtener_ultima_fila(csv_file_path):
@@ -360,7 +363,7 @@ async def predict_grain_from_csv(csv_file_path):
 
     # Extraer y convertir a valores numéricos
     last_vector = extract_numeric_values(last_vector_str)
-    await bot.send_message(chat_id=CHAT_ID, text=f"Último vector del archivo CSV: {last_vector}")
+    # await bot.send_message(chat_id=CHAT_ID, text=f"Último vector del archivo CSV: {last_vector}")
     
     if not last_vector:
         await bot.send_message(chat_id=CHAT_ID, text="No se encontraron valores numéricos en el vector.")
@@ -368,23 +371,25 @@ async def predict_grain_from_csv(csv_file_path):
 
     # Realizar la predicción
     vector_normalized = normalizar_vector(last_vector)
-    await bot.send_message(chat_id=CHAT_ID, text=f"Vector normalizado: {vector_normalized}")
+    # await bot.send_message(chat_id=CHAT_ID, text=f"Vector normalizado: {vector_normalized}")
+
+    await bot.send_message(chat_id=CHAT_ID, text=f"A continuación se muestran los resultados de la medición:")
     
     # Predicción usando la distancia euclidiana
     class_euclidean = classify_euclidean(vector_normalized, centroids)
     predictions['euclidean'] = {'predicted_class': class_euclidean}
-    await bot.send_message(chat_id=CHAT_ID, text=f"Predicción usando distancia euclidiana: {class_euclidean}")
+    # await bot.send_message(chat_id=CHAT_ID, text=f"Predicción usando distancia euclidiana: {class_euclidean}")
     
-    # Predicción usando Logistic Regression
+    # Predicción usando Logistic Regression (Predicción 1)
     predicted_class_lr, proba_lr = predict_lr(vector_normalized)
     predictions['logistic_regression'] = {'predicted_class': predicted_class_lr, 'probabilities': proba_lr}
-    await bot.send_message(chat_id=CHAT_ID, text=f"Predicción usando Logistic Regression: {predicted_class_lr}")
-    await bot.send_message(chat_id=CHAT_ID, text=f"Probabilidades de pertenencia a cada clase (Logistic Regression): \nMaiz: {proba_lr[0]},\nTrigo: {proba_lr[1]},\nPoroto: {proba_lr[2]},\nNada: {proba_lr[3]}")
+    await bot.send_message(chat_id=CHAT_ID, text=f"Predicción 1: {predicted_class_lr}")
+    await bot.send_message(chat_id=CHAT_ID, text=f"Probabilidades de pertenencia a cada clase: \nMaíz: {proba_lr[0]} %,\nTrigo: {proba_lr[1]} %,\nPoroto: {proba_lr[2]}%,\nVacío: {proba_lr[3]}%")
     
-    # Predicción usando Random Forest
+    # Predicción usando Random Forest (Predicción 2)
     predicted_class_rf = predict_rf(vector_normalized)
     predictions['random_forest'] = {'predicted_class': predicted_class_rf}
-    await bot.send_message(chat_id=CHAT_ID, text=f"Predicción usando Random Forest: {predicted_class_rf}")
+    await bot.send_message(chat_id=CHAT_ID, text=f"Predicción 2: {predicted_class_rf}")
     
     # Retornar todas las predicciones
     return {
@@ -512,33 +517,37 @@ async def mostrar_foto(nombre_foto):
         # Convertir el string de fecha y hora en un objeto datetime
         hora_santiago = datetime.datetime.strptime(f"{date_str}{time_str}", '%d%m%Y%H%M%S')
 
-        # Restar 1 segundo
-        hora_santiago += datetime.timedelta(seconds=1)
+        # Generar las tres posibles horas
+        horas_posibles = [
+            hora_santiago - datetime.timedelta(seconds=1),
+            hora_santiago,
+            hora_santiago + datetime.timedelta(seconds=1)
+        ]
 
-        # Construir el nuevo nombre del archivo
-        nuevo_nombre_foto = f"/home/pi/SpeGDet/DataMeassures/PhotoSensor/foto_{hora_santiago.strftime('%H%M%S_%d%m%Y')}.jpg"
+        # Buscar los archivos correspondientes a cada hora posible
+        archivo_encontrado = None
+        for hora in horas_posibles:
+            nuevo_nombre_foto = f"/home/pi/SpeGDet/DataMeassures/PhotoSensor/foto_{hora.strftime('%H%M%S_%d%m%Y')}.jpg"
+            if os.path.exists(nuevo_nombre_foto):
+                archivo_encontrado = nuevo_nombre_foto
+                break
 
-        # Verificar si el archivo con el nuevo nombre existe
-        if os.path.exists(nuevo_nombre_foto):
-            with open(nuevo_nombre_foto, "rb") as f:
+        # Enviar la foto si se encontró un archivo existente
+        if archivo_encontrado:
+            with open(archivo_encontrado, "rb") as f:
                 data = f.read()
+                await bot.send_message(chat_id=CHAT_ID, text="Foto tomada, el resultado se muestra a continuación.")
                 await bot.send_photo(chat_id=CHAT_ID, photo=data)
-                print(f"Foto enviada: {nuevo_nombre_foto}")
+                print(f"Foto enviada: {archivo_encontrado}")
         else:
-            print(f"No se encontró el archivo: {nuevo_nombre_foto}")
+            print(f"No se encontró ningún archivo con los nombres posibles.")
 
     except Exception as e:
         print(f"Error al mostrar la foto: {e}")
 
 async def main():
 
-    # Configurar el bot
-    application = ApplicationBuilder().token(TOKEN).build()
-
-    application.add_handler(CommandHandler("start", start))
-    application.add_handler(CommandHandler("ip", ip))
-    application.add_handler(CommandHandler("getphoto", get_photo))
-    
+  
     # Ejecutar la función main de rpisensor.py
     timevar = 0.2
     times = 3
@@ -551,17 +560,17 @@ async def main():
     datos_medida_final = []
 
     hora_santiago = datetime.datetime.now(zona_santiago)
-
     # Comienza recopilando los datos de la muestra
 
     # Rutina para tomar datos y foto
     # Toma los datos e inmediatamente la foto
-    print("Cámara Inicializada")
-    await bot.send_message(chat_id=CHAT_ID, text="Cámara Inicializada")
+    #print("Cámara Inicializada")
+    await bot.send_message(chat_id=CHAT_ID, text="Iniciando toma de datos. Por favor no desconecte el sensor.")
 
-    print("Iniciando toma de foto y datos de la muestra")
-    await bot.send_message(chat_id=CHAT_ID, text="Iniciando toma de foto y datos de la muestra")
+    #print("Iniciando toma de foto y datos de la muestra")
+    # await bot.send_message(chat_id=CHAT_ID, text="Iniciando toma de foto y datos de la muestra")
     led_array.on()
+    time.sleep(1)
     
     #for _ in range(meassurement):
         #sensor.led_current = 30
@@ -572,7 +581,9 @@ async def main():
 
     print("Datos tomados")
     
+    # picam2.start()
     tomar_foto()
+    # picam2.close()
 
     # Obtener el nombre del archivo de la última fila del CSV
     nombre_foto = obtener_nombre_foto_ultimo_csv(csv_file_path)
@@ -618,12 +629,36 @@ async def main():
 
     # # Ejecutar get_photo al final
     # await get_photo()
-    
+
+async def iniciar_bot():
+
+    # Configurar el bot
+    application = ApplicationBuilder().token(TOKEN).build()
+
+    application.add_handler(CommandHandler("start", start))
+    application.add_handler(CommandHandler("ip", ip))
+    application.add_handler(CommandHandler("getphoto", get_photo))
 
     # Ejecutar el bot
     await application.initialize()
     await application.start()
     await application.updater.start_polling()
 
+    # # Rutina de inicialización: Mensajes de bienvenida en el chat de Telegram
+    # await bot.send_message(chat_id=CHAT_ID, text="--------------------------------------------")
+    # await bot.send_message(chat_id=CHAT_ID, text="------------ NOMBRE PROYECTO V1 ------------")
+    # await bot.send_message(chat_id=CHAT_ID, text="--------------------------------------------")
+    # await bot.send_message(chat_id=CHAT_ID, text="Bienvenido/a al Detector Espectral de Granos")
+
+async def main_loop():
+    while True:
+        try:
+            await main()
+        except Exception as e:
+            print(f"Error en la ejecución: {e}")
+        await asyncio.sleep(20)  # Espera 15 segundos antes de la próxima ejecución
+
 if __name__ == "__main__":
-    asyncio.run(main())
+    loop = asyncio.get_event_loop()
+    loop.create_task(iniciar_bot())
+    loop.run_until_complete(main_loop())
