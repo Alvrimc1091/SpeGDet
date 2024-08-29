@@ -1,0 +1,42 @@
+# Edit this file to introduce tasks to be run by cron.
+# 
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+# 
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').
+# 
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+# 
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command
+
+# Every time the rpi boots, it will run the python scripts:
+# cleanup_leds.py in order to make the leds available again
+# rpistart.py in order to turn on some leds
+@reboot ~/Raspi-Confgs/init_reboot_rpi.sh
+
+# Everyday at 12.00 am the rpi will make a soft reboot
+#0 0 * * * ~/Raspi-Confgs/stop_and_reboot.sh
+
+# At the 10th minute of every 8-hour period, it will remove the data saved in the RPI
+#10 */8 * * * /usr/bin/python3 ~/Raspi-Confgs/rpi_routines.sh
+
+
+#*/5 * * * * /home/pi/Raspi-Confgs/move_files.sh
+
+
+#0-59 * * * * /bin/bash /home/pi/Raspi-Confgs/move_files.sh >> /home/pi/Raspi-Confgs/take_pictures.log 2>&1
+
+#1 * * * * /usr/bin/python3 ~/Raspi-Confgs/take_pictures.py >> /home/pi/Raspi-Confgs/salida.log 2>&1

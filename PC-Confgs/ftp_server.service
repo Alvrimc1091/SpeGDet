@@ -1,0 +1,18 @@
+# Service running in /etc/systemd/system/ftp_server.service 
+# Logs in /var/log/ftp_server.txt
+
+[Unit]
+Description=FTP Server Script
+After=network.target
+
+[Service]
+ExecStart=/home/alvaro/Documents/Workspace/Granos/FTP/gradian_ftp_server/bin/python3 /home/alvaro/Documents/Workspace/Granos/FTP/ftp_server.py
+WorkingDirectory=/home/alvaro/Documents/Workspace/Granos/FTP/
+StandardOutput=append:/var/log/ftp_server.txt
+StandardError=append:/var/log/ftp_server.txt
+Restart=always
+User=alvaro
+Group=alvaro
+
+[Install]
+WantedBy=multi-user.target

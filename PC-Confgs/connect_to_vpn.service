@@ -1,0 +1,14 @@
+# Service running in /etc/systemd/system/connect_to_vpn.service
+
+[Unit]
+Description=Connect to VPN at boot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/connect_to_vpn.sh
+ExecStartPost=/usr/local/bin/send_ip_info.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
