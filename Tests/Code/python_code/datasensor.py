@@ -56,13 +56,13 @@ sensor.astep = 599
 # Con ATIME = 100 y ASTEP = 999 se tiene t_int igual a 280ms
 
 # Sensor GAIN (Por defecto es 8 (128))
-sensor.gain = 8
+sensor.gain = 10
 
 # Definición de contador total de muestras
 meassurement = 1
 
 # Definición del threshold
-threshold = 0.1
+threshold = 0.2
 threshold_proto2 = 0.5
 
 # sensor.led = 
@@ -271,20 +271,20 @@ def estimacion_grano(vector_db, vector_proto2_db, vector_medida):
         distancias[grano] = distancia
         print(f"Distancia euclidiana para {grano}: {distancia}")
     
-    for grano_proto2, vector_referencia_proto2 in vector_proto2_db.items():
-        # Normalizar el vector de referencia
-        vector_referencia_normalizado_proto2 = normalizar_vector(vector_referencia_proto2)
-        #print(f"Vector de {grano} Normalizado: {vector_referencia_normalizado}")
+    # for grano_proto2, vector_referencia_proto2 in vector_proto2_db.items():
+    #     # Normalizar el vector de referencia
+    #     vector_referencia_normalizado_proto2 = normalizar_vector(vector_referencia_proto2)
+    #     #print(f"Vector de {grano} Normalizado: {vector_referencia_normalizado}")
 
-        distancia_proto2 = distancia_euclidiana(vector_referencia_normalizado_proto2, vector_medida_normalizado)
-        distancias_proto2[grano_proto2] = distancia_proto2
-        print(f"Distancia euclidiana (Proto 2) para {grano_proto2}: {distancia_proto2}")
+    #     distancia_proto2 = distancia_euclidiana(vector_referencia_normalizado_proto2, vector_medida_normalizado)
+    #     distancias_proto2[grano_proto2] = distancia_proto2
+    #     print(f"Distancia euclidiana (Proto 2) para {grano_proto2}: {distancia_proto2}")
     
     grano_identificado = min(distancias, key=distancias.get)
     distancia_minima = distancias[grano_identificado]
     
-    grano_identificado_proto2 = min(distancias_proto2, key=distancias_proto2.get)
-    distancia_minima_proto2 = distancias_proto2[grano_identificado_proto2]
+    # grano_identificado_proto2 = min(distancias_proto2, key=distancias_proto2.get)
+    # distancia_minima_proto2 = distancias_proto2[grano_identificado_proto2]
 
     if distancia_minima < threshold:
         limpiar_pantalla(hora_santiago)
@@ -292,19 +292,19 @@ def estimacion_grano(vector_db, vector_proto2_db, vector_medida):
         print(grano_identificado.capitalize())
         time.sleep(2)
 
-    elif threshold >= 0.1 and not distancia_minima < threshold :
+    # elif threshold >= 0.1 and not distancia_minima < threshold :
         
-        if distancia_minima_proto2 < threshold_proto2:
-            limpiar_pantalla(hora_santiago)
-            lcd.lcd_display_string(grano_identificado_proto2.capitalize(), 2)
-            print(grano_identificado_proto2.capitalize())
-            time.sleep(2)
+    #     if distancia_minima_proto2 < threshold_proto2:
+    #         limpiar_pantalla(hora_santiago)
+    #         lcd.lcd_display_string(grano_identificado_proto2.capitalize(), 2)
+    #         print(grano_identificado_proto2.capitalize())
+    #         time.sleep(2)
 
-        else:
-            limpiar_pantalla(hora_santiago)
-            lcd.lcd_display_string("Desconocido", 2)
-            print("Grano desconocido")
-            time.sleep(2)
+    #     else:
+    #         limpiar_pantalla(hora_santiago)
+    #         lcd.lcd_display_string("Desconocido", 2)
+    #         print("Grano desconocido")
+    #         time.sleep(2)
 
     else:
         limpiar_pantalla(hora_santiago)
