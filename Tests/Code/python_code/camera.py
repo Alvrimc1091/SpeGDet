@@ -33,7 +33,7 @@
 
 # Script to live stream on a webpage
 # Go to http://<your-pi-address>:8000/
-# In some cases http://192.168.2.23:8000/
+# In some cases http://192.168.0.50:8000/
 
 import io
 import logging
@@ -57,7 +57,7 @@ PAGE = """\
 </head>
 <body>
 <h1>Raspberry Tips Pi Camera Live Stream Demo</h1>
-<img src="stream.mjpg" width="640" height="480" />
+<img src="stream.mjpg" width="640" height="640" />
 </body>
 </html>
 """
@@ -124,7 +124,7 @@ class StreamingServer(socketserver.ThreadingMixIn, server.HTTPServer):
 
 # Create Picamera2 instance and configure it
 picam2 = Picamera2()
-picam2.configure(picam2.create_video_configuration(main={"size": (640, 480)}))
+picam2.configure(picam2.create_video_configuration(main={"size": (640, 640)}))
 output = StreamingOutput()
 picam2.start_recording(JpegEncoder(), FileOutput(output))
 

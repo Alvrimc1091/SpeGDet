@@ -1,0 +1,26 @@
+2024-08-13 21:27:11,259 - pyftpdlib - INFO - concurrency model: async
+2024-08-13 21:27:11,259 - pyftpdlib - INFO - masquerade (NAT) address: None
+2024-08-13 21:27:11,260 - pyftpdlib - INFO - passive ports: None
+2024-08-13 21:27:11,260 - pyftpdlib - INFO - >>> starting FTP server on 192.168.0.50:2121, pid=889 <<<
+2024-08-13 21:27:33,899 - pyftpdlib - INFO - 192.168.0.50:44520-[] FTP session opened (connect)
+2024-08-13 21:27:33,899 - __main__ - INFO - 2024-08-13 21:27:33 - Connection established from 192.168.0.50:44520
+2024-08-13 21:27:33,902 - pyftpdlib - INFO - 192.168.0.50:44520-[aimc] USER 'aimc' logged in.
+2024-08-13 21:27:33,902 - __main__ - INFO - 2024-08-13 21:27:33 - User 'aimc' logged in from 192.168.0.50:44520
+2024-08-13 21:27:33,913 - pyftpdlib - INFO - 192.168.0.50:44520-[aimc] FTP session closed (disconnect).
+2024-08-13 21:27:33,914 - __main__ - INFO - 2024-08-13 21:27:33 - User 'aimc' logged out from 192.168.0.50:44520
+2024-08-13 21:27:33,915 - __main__ - INFO - 2024-08-13 21:27:33 - Connection closed from 192.168.0.50:44520
+2024-08-13 21:27:49,201 - pyftpdlib - INFO - received interrupt signal
+2024-08-13 21:27:49,202 - pyftpdlib - INFO - >>> shutting down FTP server, 1 socket(s), pid=889 <<<
+2024-08-13 21:30:23,727 - pyftpdlib - INFO - concurrency model: async
+2024-08-13 21:30:23,727 - pyftpdlib - INFO - masquerade (NAT) address: None
+2024-08-13 21:30:23,728 - pyftpdlib - INFO - passive ports: None
+2024-08-13 21:30:23,728 - pyftpdlib - INFO - >>> starting FTP server on 192.168.0.50:2121, pid=939 <<<
+2024-08-13 21:30:34,602 - pyftpdlib - INFO - 192.168.0.50:58534-[] FTP session opened (connect)
+2024-08-13 21:30:34,693 - __main__ - INFO - 2024-08-13 16:30:34 - Connection established from 192.168.0.50:58534
+2024-08-13 21:30:34,694 - pyftpdlib - INFO - 192.168.0.50:58534-[aimc] USER 'aimc' logged in.
+2024-08-13 21:30:34,695 - __main__ - INFO - 2024-08-13 16:30:34 - User 'aimc' logged in from 192.168.0.50:58534
+2024-08-13 21:30:34,706 - pyftpdlib - INFO - 192.168.0.50:58534-[aimc] FTP session closed (disconnect).
+2024-08-13 21:30:34,707 - __main__ - INFO - 2024-08-13 16:30:34 - User 'aimc' logged out from 192.168.0.50:58534
+2024-08-13 21:30:34,708 - __main__ - INFO - 2024-08-13 16:30:34 - Connection closed from 192.168.0.50:58534
+2024-08-13 21:30:38,241 - pyftpdlib - INFO - received interrupt signal
+2024-08-13 21:30:38,242 - pyftpdlib - INFO - >>> shutting down FTP server, 1 socket(s), pid=939 <<<

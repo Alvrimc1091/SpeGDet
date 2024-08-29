@@ -1,0 +1,149 @@
+2024-08-16 17:41:37,164 - Connected to the FTP Server
+2024-08-16 17:41:37,178 - Starting the data/photo loop
+2024-08-16 17:41:37,178 - Starting meassure
+2024-08-16 17:41:37,179 - Cámara Inicializada
+2024-08-16 17:41:37,180 - Iniciando toma de foto y datos de la muestra
+2024-08-16 17:41:38,384 - Datos tomados
+2024-08-16 17:41:38,396 - Configuration successful!
+2024-08-16 17:41:38,575 - Camera started
+2024-08-16 17:41:39,381 - Saved <picamera2.request.Helpers object at 0x7f73da2090> to file /home/pi/SpeGDet/DataMeassures/TestMeassures/foto_16082024_124138.jpg.
+2024-08-16 17:41:39,387 - Time taken for encode: 233.85840898845345 ms.
+2024-08-16 17:41:40,421 - Foto tomada
+2024-08-16 17:41:40,422 - Juego de luces
+2024-08-16 17:41:42,025 - Mostrando datos a continuación
+2024-08-16 17:41:42,092 - The last jpg file is /home/pi/SpeGDet/DataMeassures/TestMeassures/foto_16082024_124138.jpg
+2024-08-16 17:41:42,106 - The last csv file is /home/pi/SpeGDet/DataMeassures/TestMeassures/data_proto2_16082024_124138.csv
+2024-08-16 17:41:42,226 - Foto subida
+2024-08-16 17:41:42,233 - CSV subiido
+2024-08-16 17:41:52,251 - Starting meassure
+2024-08-16 17:41:52,300 - Cámara Inicializada
+2024-08-16 17:41:52,300 - Iniciando toma de foto y datos de la muestra
+2024-08-16 17:41:53,632 - Datos tomados
+2024-08-16 17:41:53,796 - Saved <picamera2.request.Helpers object at 0x7f73da2090> to file /home/pi/SpeGDet/DataMeassures/TestMeassures/foto_16082024_124153.jpg.
+2024-08-16 17:41:53,796 - Time taken for encode: 42.49890602659434 ms.
+2024-08-16 17:41:54,800 - Foto tomada
+2024-08-16 17:41:54,802 - Juego de luces
+2024-08-16 17:41:56,406 - Mostrando datos a continuación
+2024-08-16 17:41:56,411 - The last jpg file is /home/pi/SpeGDet/DataMeassures/TestMeassures/foto_16082024_124153.jpg
+2024-08-16 17:41:56,427 - The last csv file is /home/pi/SpeGDet/DataMeassures/TestMeassures/data_proto2_16082024_124153.csv
+2024-08-16 17:41:56,456 - Foto subida
+2024-08-16 17:41:56,464 - CSV subiido
+2024-08-16 17:42:06,466 - Starting meassure
+2024-08-16 17:42:06,467 - Cámara Inicializada
+2024-08-16 17:42:06,468 - Iniciando toma de foto y datos de la muestra
+2024-08-16 17:42:07,667 - Datos tomados
+2024-08-16 17:42:07,698 - Saved <picamera2.request.Helpers object at 0x7f73da2090> to file /home/pi/SpeGDet/DataMeassures/TestMeassures/foto_16082024_124207.jpg.
+2024-08-16 17:42:07,698 - Time taken for encode: 21.77939799730666 ms.
+2024-08-16 17:42:08,702 - Foto tomada
+2024-08-16 17:42:08,703 - Juego de luces
+2024-08-16 17:42:10,307 - Mostrando datos a continuación
+2024-08-16 17:42:10,310 - The last jpg file is /home/pi/SpeGDet/DataMeassures/TestMeassures/foto_16082024_124207.jpg
+2024-08-16 17:42:10,325 - The last csv file is /home/pi/SpeGDet/DataMeassures/TestMeassures/data_proto2_16082024_124207.csv
+2024-08-16 17:42:10,339 - Foto subida
+2024-08-16 17:42:10,348 - CSV subiido
+2024-08-16 17:42:20,348 - Starting meassure
+2024-08-16 17:42:20,349 - Cámara Inicializada
+2024-08-16 17:42:20,350 - Iniciando toma de foto y datos de la muestra
+2024-08-16 17:42:21,539 - Datos tomados
+2024-08-16 17:42:21,565 - Saved <picamera2.request.Helpers object at 0x7f73da2090> to file /home/pi/SpeGDet/DataMeassures/TestMeassures/foto_16082024_124221.jpg.
+2024-08-16 17:42:21,566 - Time taken for encode: 21.0327859967947 ms.
+2024-08-16 17:42:22,569 - Foto tomada
+2024-08-16 17:42:22,570 - Juego de luces
+2024-08-16 17:42:24,173 - Mostrando datos a continuación
+2024-08-16 17:42:24,176 - The last jpg file is /home/pi/SpeGDet/DataMeassures/TestMeassures/foto_16082024_124221.jpg
+2024-08-16 17:42:24,179 - The last csv file is /home/pi/SpeGDet/DataMeassures/TestMeassures/data_proto2_16082024_124221.csv
+2024-08-16 17:42:24,193 - Foto subida
+2024-08-16 17:42:24,201 - CSV subiido
+2024-08-16 17:42:28,068 - Script interrumpido por el usuario (CTRL+C).
+2024-08-16 17:42:28,070 - Connection closed
+2024-08-16 17:42:28,159 - Camera stopped
+2024-08-16 17:42:28,416 - Camera closed successfully.
+2024-08-16 17:57:53 - Connected to the FTP Server
+2024-08-16 17:57:53 - Starting the data/photo loop
+2024-08-16 17:57:53 - Starting meassure
+2024-08-16 17:57:53 - Cámara Inicializada
+2024-08-16 17:57:53 - Iniciando toma de foto y datos de la muestra
+2024-08-16 17:57:54 - Datos tomados
+2024-08-16 17:57:56 - Foto tomada
+2024-08-16 17:57:56 - Juego de luces
+2024-08-16 17:57:57 - Mostrando datos a continuación
+2024-08-16 17:57:57 - The last jpg file is /home/pi/SpeGDet/DataMeassures/TestMeassures/foto_16082024_125754.jpg
+2024-08-16 17:57:57 - The last csv file is /home/pi/SpeGDet/DataMeassures/TestMeassures/data_proto2_16082024_125754.csv
+2024-08-16 17:57:57 - Foto subida
+2024-08-16 17:57:57 - CSV subiido
+2024-08-16 17:58:07 - Starting meassure
+2024-08-16 17:58:07 - Cámara Inicializada
+2024-08-16 17:58:07 - Iniciando toma de foto y datos de la muestra
+2024-08-16 17:58:09 - Datos tomados
+2024-08-16 17:58:10 - Foto tomada
+2024-08-16 17:58:10 - Juego de luces
+2024-08-16 17:58:11 - Mostrando datos a continuación
+2024-08-16 17:58:11 - The last jpg file is /home/pi/SpeGDet/DataMeassures/TestMeassures/foto_16082024_125809.jpg
+2024-08-16 17:58:11 - The last csv file is /home/pi/SpeGDet/DataMeassures/TestMeassures/data_proto2_16082024_125809.csv
+2024-08-16 17:58:11 - Foto subida
+2024-08-16 17:58:11 - CSV subiido
+2024-08-16 17:58:14 - Script interrumpido por el usuario (CTRL+C).
+2024-08-16 17:58:14 - Connection closed
+2024-08-16 18:02:33 - 2024-08-16 13:02:33 - Connected to the FTP Server
+2024-08-16 18:02:33 - 2024-08-16 13:02:33 - Starting the data/photo loop
+2024-08-16 18:02:33 - 2024-08-16 13:02:33 - Starting meassure
+2024-08-16 18:02:33 - 2024-08-16 13:02:33 - Cámara Inicializada
+2024-08-16 18:02:33 - 2024-08-16 13:02:33 - Iniciando toma de foto y datos de la muestra
+2024-08-16 18:02:35 - 2024-08-16 13:02:35 - Datos tomados
+2024-08-16 18:02:36 - 2024-08-16 13:02:36 - Foto tomada
+2024-08-16 18:02:36 - 2024-08-16 13:02:36 - Juego de luces
+2024-08-16 18:02:38 - 2024-08-16 13:02:38 - Mostrando datos a continuación
+2024-08-16 18:02:38 - 2024-08-16 13:02:38 - The last jpg file is /home/pi/SpeGDet/DataMeassures/TestMeassures/foto_16082024_130235.jpg
+2024-08-16 18:02:38 - 2024-08-16 13:02:38 - The last csv file is /home/pi/SpeGDet/DataMeassures/TestMeassures/data_proto2_16082024_130235.csv
+2024-08-16 18:02:38 - 2024-08-16 13:02:38 - Foto subida
+2024-08-16 18:02:38 - 2024-08-16 13:02:38 - CSV subiido
+2024-08-16 18:02:48 - 2024-08-16 13:02:48 - Starting meassure
+2024-08-16 18:02:48 - 2024-08-16 13:02:48 - Cámara Inicializada
+2024-08-16 18:02:48 - 2024-08-16 13:02:48 - Iniciando toma de foto y datos de la muestra
+2024-08-16 18:02:49 - 2024-08-16 13:02:49 - Datos tomados
+2024-08-16 18:02:50 - 2024-08-16 13:02:50 - Foto tomada
+2024-08-16 18:02:50 - 2024-08-16 13:02:50 - Juego de luces
+2024-08-16 18:02:52 - 2024-08-16 13:02:52 - Mostrando datos a continuación
+2024-08-16 18:02:52 - 2024-08-16 13:02:52 - The last jpg file is /home/pi/SpeGDet/DataMeassures/TestMeassures/foto_16082024_130249.jpg
+2024-08-16 18:02:52 - 2024-08-16 13:02:52 - The last csv file is /home/pi/SpeGDet/DataMeassures/TestMeassures/data_proto2_16082024_130249.csv
+2024-08-16 18:02:52 - 2024-08-16 13:02:52 - Foto subida
+2024-08-16 18:02:52 - 2024-08-16 13:02:52 - CSV subiido
+2024-08-16 18:03:02 - 2024-08-16 13:03:02 - Starting meassure
+2024-08-16 18:03:02 - 2024-08-16 13:03:02 - Cámara Inicializada
+2024-08-16 18:03:02 - 2024-08-16 13:03:02 - Iniciando toma de foto y datos de la muestra
+2024-08-16 18:03:03 - 2024-08-16 13:03:03 - Datos tomados
+2024-08-16 18:03:04 - 2024-08-16 13:03:04 - Foto tomada
+2024-08-16 18:03:04 - 2024-08-16 13:03:04 - Juego de luces
+2024-08-16 18:03:06 - 2024-08-16 13:03:06 - Mostrando datos a continuación
+2024-08-16 18:03:06 - 2024-08-16 13:03:06 - The last jpg file is /home/pi/SpeGDet/DataMeassures/TestMeassures/foto_16082024_130303.jpg
+2024-08-16 18:03:06 - 2024-08-16 13:03:06 - The last csv file is /home/pi/SpeGDet/DataMeassures/TestMeassures/data_proto2_16082024_130303.csv
+2024-08-16 18:03:06 - 2024-08-16 13:03:06 - Foto subida
+2024-08-16 18:03:06 - 2024-08-16 13:03:06 - CSV subiido
+2024-08-16 18:03:09 - 2024-08-16 13:03:09 - Script interrumpido por el usuario (CTRL+C).
+2024-08-16 18:03:09 - 2024-08-16 13:03:09 - Connection closed
+2024-08-16 13:05:40 - Connected to the FTP Server
+2024-08-16 13:05:40 - Starting the data/photo loop
+2024-08-16 13:05:40 - Starting meassure
+2024-08-16 13:05:40 - Cámara Inicializada
+2024-08-16 13:05:40 - Iniciando toma de foto y datos de la muestra
+2024-08-16 13:05:41 - Datos tomados
+2024-08-16 13:05:43 - Foto tomada
+2024-08-16 13:05:43 - Juego de luces
+2024-08-16 13:05:44 - Mostrando datos a continuación
+2024-08-16 13:05:44 - The last jpg file is /home/pi/SpeGDet/DataMeassures/TestMeassures/foto_16082024_130541.jpg
+2024-08-16 13:05:44 - The last csv file is /home/pi/SpeGDet/DataMeassures/TestMeassures/data_proto2_16082024_130541.csv
+2024-08-16 13:05:44 - Foto subida
+2024-08-16 13:05:44 - CSV subiido
+2024-08-16 13:05:54 - Starting meassure
+2024-08-16 13:05:54 - Cámara Inicializada
+2024-08-16 13:05:54 - Iniciando toma de foto y datos de la muestra
+2024-08-16 13:05:56 - Datos tomados
+2024-08-16 13:05:57 - Foto tomada
+2024-08-16 13:05:57 - Juego de luces
+2024-08-16 13:05:58 - Mostrando datos a continuación
+2024-08-16 13:05:58 - The last jpg file is /home/pi/SpeGDet/DataMeassures/TestMeassures/foto_16082024_130556.jpg
+2024-08-16 13:05:58 - The last csv file is /home/pi/SpeGDet/DataMeassures/TestMeassures/data_proto2_16082024_130556.csv
+2024-08-16 13:05:58 - Foto subida
+2024-08-16 13:05:58 - CSV subiido
+2024-08-16 13:06:00 - Script interrumpido por el usuario (CTRL+C).
+2024-08-16 13:06:00 - Connection closed
