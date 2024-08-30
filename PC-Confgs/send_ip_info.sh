@@ -8,8 +8,8 @@ sleep 2
 # Configuraciones
 EMAIL_RECIPIENTS="aimc2918@hotmail.com, example2@example.com"
 EMAIL_SUBJECT="Direcciones IP después de la conexión VPN de PC Gradian"
-LOG_FILE="/var/log/vpn_ip_log.txt"
-log_filevpn="/var/log/vpn_connection_log.txt"
+LOG_FILE="/var/log/vpn_ip_log.log"
+log_filevpn="/var/log/vpn_connection_log.log"
 TIMESTAMP=$(TZ="America/Santiago" date '+%Y-%m-%d %H:%M:%S')
 
 # Obtener direcciones IP

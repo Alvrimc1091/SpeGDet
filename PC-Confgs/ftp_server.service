@@ -8,8 +8,8 @@ After=network.target
 [Service]
 ExecStart=/home/alvaro/Documents/Workspace/Granos/FTP/gradian_ftp_server/bin/python3 /home/alvaro/Documents/Workspace/Granos/FTP/ftp_server.py
 WorkingDirectory=/home/alvaro/Documents/Workspace/Granos/FTP/
-StandardOutput=append:/var/log/ftp_server.txt
-StandardError=append:/var/log/ftp_server.txt
+StandardOutput=append:/var/log/ftp_server.log
+StandardError=append:/var/log/ftp_server.log
 Restart=always
 User=alvaro
 Group=alvaro

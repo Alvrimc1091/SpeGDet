@@ -11,4 +11,4 @@ log(){
 # Log the start of remove_files.py
 log "RPI Routines: remove_files.py (Removes files from the RPI db)"
 sudo python3 ~/Raspi-Confgs/remove_files.py
-sleep 1
+sleep 5

@@ -9,7 +9,7 @@ TZ="America/Santiago"
 current_time=$(date "+%Y-%m-%d %H:%M:%S")
 
 # Archivo de log
-log_file="/var/log/vpn_connection_log.txt"
+log_file="/var/log/vpn_connection_log.log"
 
 VPN_SERVER="vpn.uchile.cl"
 USERNAME="username"

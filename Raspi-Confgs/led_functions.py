@@ -2,10 +2,10 @@ from gpiozero import LED
 import time
 
 
-led_red = LED(5) # Rojo -> Alerta
+led_red = LED(26) # Rojo -> Alerta
 led_green = LED(6) # Verde -> Trigo
 led_blue = LED(22) # Azul -> Poroto
-led_white = LED(26) # Blanco -> Vacío
+led_white = LED(5) # Blanco -> Vacío
 led_yellow = LED(27) # Amarillo -> Maíz
 
 time_slp = 0.2
@@ -129,3 +129,13 @@ def blink_leds(counts):
         led_white.off()
         led_yellow.off()
         time.sleep(0.5)
+
+
+def blink_red_led(t):
+
+    for i in range(t):
+        led_red.on()
+        time.sleep(0.5)
+        led_red.off()
+        time.sleep(0.5)
+

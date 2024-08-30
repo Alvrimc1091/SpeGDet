@@ -76,7 +76,7 @@ handler = LoggingFTPHandler
 handler.authorizer = authorizer
 
 # Define the server's IP and port
-server = FTPServer(("192.168.0.102", 2121), handler)
+server = FTPServer(("0.0.0.0", 2121), handler)
 
 # Start the server
 server.serve_forever()
