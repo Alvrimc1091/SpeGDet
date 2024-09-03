@@ -1,0 +1,168 @@
+2024-09-02 19:21:35 - RPI Initialization Routine: Running cleanup_leds.py
+2024-09-02 14:21:38 - Limpiando pines de GPIO
+2024-09-02 14:21:40 - Pines de GPIO limpiados
+2024-09-02 19:21:42 - RPI Initialization Routine: Running rpistart.py
+2024-09-02 14:21:48 - RPI Initialized.
+2024-09-02 19:21:50 - RPI Initialization Routine: Running upload_not_sent_data.py
+2024-09-02 14:21:52 - Connecting to the FTP server
+2024-09-02 14:21:52 - Connected to the FTP Server
+2024-09-02 14:21:52 - Connected to the FTP Server
+2024-09-02 14:21:52 - Uploading data (.csv and .jpg)
+2024-09-02 14:21:52 - Uploading data (.csv and .jpg)
+2024-09-02 19:21:54 - RPI Initialization Routine: Running remove_files.py
+2024-09-02 19:21:56 - RPI Initialization Routine: Proceeding to rpi_ftpsensor.py
+2024-09-02 19:21:56 - RPI Initialization Routine: Executing rpi_ftpsensor.py
+2024-09-02 14:56:26 - Limpiando pines de GPIO
+2024-09-02 14:56:28 - Pines de GPIO limpiados
+2024-09-02 19:56:30 - RPI Initialization Routine: Running rpistart.py
+2024-09-02 14:56:36 - RPI Initialized.
+2024-09-02 19:56:38 - RPI Initialization Routine: Running upload_not_sent_data.py
+2024-09-02 14:56:39 - Connecting to the FTP server
+2024-09-02 14:56:43 - Failed to connect or login to FTP server: [Errno 113] No route to host
+2024-09-02 14:56:43 - Failed to connect or login to FTP server: [Errno 113] No route to host
+2024-09-02 19:56:50 - RPI Initialization Routine: Running remove_files.py
+2024-09-02 19:56:52 - RPI Initialization Routine: Proceeding to rpi_ftpsensor.py
+2024-09-02 19:56:52 - RPI Initialization Routine: Executing rpi_ftpsensor.py
+2024-09-02 20:10:37 - RPI Initialization Routine: Running cleanup_leds.py
+2024-09-02 15:10:41 - Limpiando pines de GPIO
+2024-09-02 15:10:43 - Pines de GPIO limpiados
+2024-09-02 20:10:45 - RPI Initialization Routine: Running rpistart.py
+2024-09-02 15:10:51 - RPI Initialized.
+2024-09-02 20:10:53 - RPI Initialization Routine: Running upload_not_sent_data.py
+2024-09-02 15:10:54 - Connecting to the FTP server
+2024-09-02 15:10:57 - Failed to connect or login to FTP server: [Errno 113] No route to host
+2024-09-02 15:10:57 - Failed to connect or login to FTP server: [Errno 113] No route to host
+2024-09-02 20:11:04 - RPI Initialization Routine: Running remove_files.py
+2024-09-02 20:11:07 - RPI Initialization Routine: Proceeding to rpi_ftpsensor.py
+2024-09-02 20:11:07 - RPI Initialization Routine: Executing rpi_ftpsensor.py
+2024-09-02 20:14:23 - RPI Initialization Routine: Running cleanup_leds.py
+2024-09-02 15:14:26 - Limpiando pines de GPIO
+2024-09-02 15:14:28 - Pines de GPIO limpiados
+2024-09-02 20:14:30 - RPI Initialization Routine: Running rpistart.py
+2024-09-02 15:14:36 - RPI Initialized.
+2024-09-02 20:14:38 - RPI Initialization Routine: Running upload_not_sent_data.py
+2024-09-02 15:14:40 - Connecting to the FTP server
+2024-09-02 15:14:40 - Connected to the FTP Server
+2024-09-02 15:14:40 - Connected to the FTP Server
+2024-09-02 15:14:40 - Uploading data (.csv and .jpg)
+2024-09-02 15:14:40 - Uploading data (.csv and .jpg)
+2024-09-02 20:14:42 - RPI Initialization Routine: Running remove_files.py
+2024-09-02 20:14:45 - RPI Initialization Routine: Proceeding to rpi_ftpsensor.py
+2024-09-02 20:14:45 - RPI Initialization Routine: Executing rpi_ftpsensor.py
+2024-09-03 00:00:01 - Script started.
+2024-09-03 00:00:01 - RPI Reboot Routine: Python script rpi_ftpsensor.py stopped successfully.
+2024-09-03 00:00:01 - RPI Reboot Routine: Waiting for 10 seconds to ensure the script is terminated.
+2024-09-03 00:00:11 - RPI Reboot Routine: Running cleanup_leds.py
+2024-09-02 19:00:12 - Cleaning up the GPIO Pins
+2024-09-02 19:00:14 - GPIO Cleaned, ready to use
+2024-09-03 00:00:16 - RPI Reboot Routine: Running 
+2024-09-02 19:00:21 - Red led blinking
+2024-09-02 19:00:21 - RPI Rebooting.
+2024-09-03 00:00:22 - Rebooting the system.
+2024-09-03 00:00:28 - RPI Initialization Routine: Running cleanup_leds.py
+2024-09-02 19:00:31 - Cleaning up the GPIO Pins
+2024-09-02 19:00:33 - GPIO Cleaned, ready to use
+2024-09-03 00:00:36 - RPI Initialization Routine: Running rpistart.py
+2024-09-02 19:00:36 - Starting with the LEDs
+2024-09-02 19:00:42 - RPI Initialized.
+2024-09-03 00:00:44 - RPI Initialization Routine: Running upload_not_sent_data.py
+2024-09-02 19:00:45 - Connecting to the FTP server
+2024-09-02 19:00:45 - Connected to the FTP Server
+2024-09-02 19:00:45 - Connected to the FTP Server
+2024-09-02 19:00:45 - Uploading data (.csv and .jpg)
+2024-09-02 19:00:45 - Uploading data (.csv and .jpg)
+2024-09-02 19:00:45 - All files have been uploaded successfully.
+2024-09-02 19:00:45 - All files have been uploaded successfully.
+2024-09-02 19:00:45 - All files have been uploaded successfully.
+2024-09-02 19:00:45 - Removing data from the failed directory
+2024-09-02 19:00:45 - Removing data from the failed directory
+2024-09-02 19:00:45 - Removing data from the failed directory
+2024-09-02 19:00:45 - No files to remove. The failed_upload_dir is empty.
+2024-09-02 19:00:45 - No files to remove. The failed_upload_dir is empty.
+2024-09-02 19:00:45 - No files to remove. The failed_upload_dir is empty.
+2024-09-02 19:00:45 - No files to remove. The failed_upload_dir is empty.
+2024-09-02 19:00:45 - FTP connection closed.
+2024-09-02 19:00:45 - FTP connection closed.
+2024-09-02 19:00:45 - FTP connection closed.
+2024-09-02 19:00:45 - FTP connection closed.
+2024-09-03 00:00:52 - RPI Initialization Routine: Running remove_files.py
+2024-09-03 00:00:55 - RPI Initialization Routine: Proceeding to rpi_ftpsensor.py
+2024-09-03 00:00:55 - RPI Initialization Routine: Executing rpi_ftpsensor.py
+2024-09-03 14:27:30 - Script started.
+2024-09-03 14:27:30 - RPI Reboot Routine: Python script rpi_ftpsensor.py stopped successfully.
+2024-09-03 14:27:30 - RPI Reboot Routine: Waiting for 10 seconds to ensure the script is terminated.
+2024-09-03 14:27:40 - RPI Reboot Routine: Running cleanup_leds.py
+2024-09-03 09:27:41 - Cleaning up the GPIO Pins
+2024-09-03 09:27:43 - GPIO Cleaned, ready to use
+2024-09-03 14:27:45 - RPI Reboot Routine: Running 
+2024-09-03 09:27:50 - Red led blinking
+2024-09-03 09:27:50 - RPI Rebooting.
+2024-09-03 14:27:51 - Rebooting the system.
+2024-09-03 14:28:07 - RPI Initialization Routine: Running cleanup_leds.py
+2024-09-03 09:28:10 - Cleaning up the GPIO Pins
+2024-09-03 09:28:12 - GPIO Cleaned, ready to use
+2024-09-03 14:28:14 - RPI Initialization Routine: Running rpistart.py
+2024-09-03 09:28:15 - Starting with the LEDs
+2024-09-03 09:28:20 - RPI Initialized.
+2024-09-03 14:28:22 - RPI Initialization Routine: Running upload_not_sent_data.py
+2024-09-03 09:28:23 - Connecting to the FTP server
+2024-09-03 09:28:24 - Connected to the FTP Server
+2024-09-03 09:28:24 - Connected to the FTP Server
+2024-09-03 09:28:24 - Uploading data (.csv and .jpg)
+2024-09-03 09:28:24 - Uploading data (.csv and .jpg)
+2024-09-03 09:28:24 - All files have been uploaded successfully.
+2024-09-03 09:28:24 - All files have been uploaded successfully.
+2024-09-03 09:28:24 - All files have been uploaded successfully.
+2024-09-03 09:28:24 - Removing data from the failed directory
+2024-09-03 09:28:24 - Removing data from the failed directory
+2024-09-03 09:28:24 - Removing data from the failed directory
+2024-09-03 09:28:24 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 09:28:24 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 09:28:24 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 09:28:24 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 09:28:24 - FTP connection closed.
+2024-09-03 09:28:24 - FTP connection closed.
+2024-09-03 09:28:24 - FTP connection closed.
+2024-09-03 09:28:24 - FTP connection closed.
+2024-09-03 14:28:31 - RPI Initialization Routine: Running remove_files.py
+2024-09-03 14:28:35 - RPI Initialization Routine: Proceeding to rpi_ftpsensor.py
+2024-09-03 14:28:35 - RPI Initialization Routine: Executing rpi_ftpsensor.py
+2024-09-03 09:32:01 - Script started.
+2024-09-03 09:32:02 - RPI Reboot Routine: Python script rpi_ftpsensor.py stopped successfully.
+2024-09-03 09:32:02 - RPI Reboot Routine: Waiting for 10 seconds to ensure the script is terminated.
+2024-09-03 09:32:12 - RPI Reboot Routine: Running cleanup_leds.py
+2024-09-03 09:32:13 - Cleaning up the GPIO Pins
+2024-09-03 09:32:15 - GPIO Cleaned, ready to use
+2024-09-03 09:32:16 - RPI Reboot Routine: Running 
+2024-09-03 09:32:22 - Red led blinking
+2024-09-03 09:32:22 - RPI Rebooting.
+2024-09-03 09:32:22 - Rebooting the system.
+2024-09-03 09:32:38 - RPI Initialization Routine: Running cleanup_leds.py
+2024-09-03 09:32:41 - Cleaning up the GPIO Pins
+2024-09-03 09:32:43 - GPIO Cleaned, ready to use
+2024-09-03 09:32:45 - RPI Initialization Routine: Running rpistart.py
+2024-09-03 09:32:46 - Starting with the LEDs
+2024-09-03 09:32:51 - RPI Initialized.
+2024-09-03 09:32:53 - RPI Initialization Routine: Running upload_not_sent_data.py
+2024-09-03 09:32:54 - Connecting to the FTP server
+2024-09-03 09:32:55 - Connected to the FTP Server
+2024-09-03 09:32:55 - Connected to the FTP Server
+2024-09-03 09:32:55 - Uploading data (.csv and .jpg)
+2024-09-03 09:32:55 - Uploading data (.csv and .jpg)
+2024-09-03 09:32:55 - All files have been uploaded successfully.
+2024-09-03 09:32:55 - All files have been uploaded successfully.
+2024-09-03 09:32:55 - All files have been uploaded successfully.
+2024-09-03 09:32:55 - Removing data from the failed directory
+2024-09-03 09:32:55 - Removing data from the failed directory
+2024-09-03 09:32:55 - Removing data from the failed directory
+2024-09-03 09:32:55 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 09:32:55 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 09:32:55 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 09:32:55 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 09:32:55 - FTP connection closed.
+2024-09-03 09:32:55 - FTP connection closed.
+2024-09-03 09:32:55 - FTP connection closed.
+2024-09-03 09:32:55 - FTP connection closed.
+2024-09-03 09:33:03 - RPI Initialization Routine: Running remove_files.py
+2024-09-03 09:33:05 - RPI Initialization Routine: Proceeding to rpi_ftpsensor.py
+2024-09-03 09:33:05 - RPI Initialization Routine: Executing rpi_ftpsensor.py
