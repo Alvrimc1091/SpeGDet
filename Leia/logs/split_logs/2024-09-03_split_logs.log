@@ -1,0 +1,682 @@
+2024-09-03 10:59:54 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 10:59:54 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 10:59:54 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 10:59:54 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 10:59:54 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 10:59:54 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:01:37 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:01:37 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:01:37 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:01:37 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:01:37 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:01:37 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:03:00 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:03:00 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:03:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:03:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:03:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_boot_log.log
+2024-09-03 11:03:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_boot_log.log
+2024-09-03 11:03:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:03:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:11:11 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:11:11 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:11:11 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:11:11 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:11:11 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_boot_log.log
+2024-09-03 11:11:11 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_boot_log.log
+2024-09-03 11:11:11 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_boot_log.log
+2024-09-03 11:11:11 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_boot_log.log
+2024-09-03 11:11:11 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:11:11 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:20:21 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:20:21 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:20:21 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:20:21 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:20:21 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/024-08-26 _test_boot_log.log
+2024-09-03 11:20:21 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/024-08-26 _test_boot_log.log
+2024-09-03 11:20:21 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-26_test_boot_log.log
+2024-09-03 11:20:21 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-26_test_boot_log.log
+2024-09-03 11:20:21 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-27_test_boot_log.log
+2024-09-03 11:20:21 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-27_test_boot_log.log
+2024-09-03 11:21:00 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_log_rpiftpsensor.log to save it
+2024-09-03 11:21:00 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_log_rpiftpsensor.log to save it
+2024-09-03 11:21:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:21:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:21:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/024-08-26 _test_log_rpiftpsensor.log
+2024-09-03 11:21:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/024-08-26 _test_log_rpiftpsensor.log
+2024-09-03 11:21:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-26_test_log_rpiftpsensor.log
+2024-09-03 11:21:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-26_test_log_rpiftpsensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_rpisensor.log to save it
+2024-09-03 11:23:13 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_rpisensor.log to save it
+2024-09-03 11:23:13 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:23:13 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-28_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-28_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-31_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-31_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-01_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-01_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_test_rpisensor.log
+2024-09-03 11:46:19 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:46:19 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:46:19 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:19 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:19 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_boot_log.log
+2024-09-03 11:46:19 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_boot_log.log
+2024-09-03 11:46:19 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:46:19 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:46:19 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:46:19 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:46:19 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-28_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-28_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-28_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-31_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-31_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-31_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-01_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-01_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-01_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:20 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:20 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:20 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:46:30 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_rpisensor.log
+2024-09-03 11:46:30 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_rpisensor.log
+2024-09-03 11:46:30 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_rpisensor.log
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_boot_log.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_boot_log.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_rpisensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_rpisensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_rpisensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_boot_log.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_boot_log.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_rpisensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_rpisensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_rpisensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 10:59:54 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 10:59:54 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 10:59:54 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 10:59:54 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 10:59:54 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 10:59:54 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:01:37 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:01:37 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:01:37 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:01:37 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:01:37 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:01:37 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:03:00 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:03:00 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:03:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:03:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:03:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_boot_log.log
+2024-09-03 11:03:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_boot_log.log
+2024-09-03 11:03:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:03:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:11:11 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:11:11 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:11:11 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:11:11 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:11:11 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_boot_log.log
+2024-09-03 11:11:11 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_boot_log.log
+2024-09-03 11:11:11 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_boot_log.log
+2024-09-03 11:11:11 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_boot_log.log
+2024-09-03 11:11:11 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:11:11 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:20:21 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:20:21 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:20:21 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:20:21 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:20:21 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/024-08-26 _test_boot_log.log
+2024-09-03 11:20:21 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/024-08-26 _test_boot_log.log
+2024-09-03 11:20:21 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-26_test_boot_log.log
+2024-09-03 11:20:21 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-26_test_boot_log.log
+2024-09-03 11:20:21 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-27_test_boot_log.log
+2024-09-03 11:20:21 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-27_test_boot_log.log
+2024-09-03 11:21:00 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_log_rpiftpsensor.log to save it
+2024-09-03 11:21:00 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_log_rpiftpsensor.log to save it
+2024-09-03 11:21:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:21:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:21:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/024-08-26 _test_log_rpiftpsensor.log
+2024-09-03 11:21:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/024-08-26 _test_log_rpiftpsensor.log
+2024-09-03 11:21:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-26_test_log_rpiftpsensor.log
+2024-09-03 11:21:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-26_test_log_rpiftpsensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_rpisensor.log to save it
+2024-09-03 11:23:13 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_rpisensor.log to save it
+2024-09-03 11:23:13 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:23:13 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-28_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-28_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-31_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-31_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-01_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-01_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_test_rpisensor.log
+2024-09-03 11:46:19 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:46:19 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:46:19 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:19 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:19 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_boot_log.log
+2024-09-03 11:46:19 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_boot_log.log
+2024-09-03 11:46:19 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:46:19 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:46:19 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:46:19 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:46:19 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-28_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-28_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-28_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-31_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-31_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-31_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-01_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-01_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-01_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:20 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:20 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:20 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:46:30 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_rpisensor.log
+2024-09-03 11:46:30 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_rpisensor.log
+2024-09-03 11:46:30 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_rpisensor.log
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_boot_log.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_boot_log.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_rpisensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_rpisensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_rpisensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_boot_log.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_boot_log.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_rpisensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_rpisensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_rpisensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:14:47 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-02_boot_log.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-02_boot_log.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_boot_log.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_boot_log.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:14:47 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:14:47 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_rpisensor.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_rpisensor.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_rpisensor.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:14:47 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:14:47 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:14:47 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 10:59:54 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 10:59:54 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 10:59:54 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 10:59:54 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 10:59:54 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 10:59:54 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:01:37 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:01:37 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:01:37 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:01:37 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:01:37 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:01:37 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:03:00 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:03:00 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:03:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:03:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:03:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_boot_log.log
+2024-09-03 11:03:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_boot_log.log
+2024-09-03 11:03:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:03:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:11:11 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:11:11 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:11:11 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:11:11 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:11:11 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_boot_log.log
+2024-09-03 11:11:11 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_boot_log.log
+2024-09-03 11:11:11 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_boot_log.log
+2024-09-03 11:11:11 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_boot_log.log
+2024-09-03 11:11:11 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:11:11 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:20:21 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:20:21 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_boot_log.log to save it
+2024-09-03 11:20:21 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:20:21 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:20:21 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/024-08-26 _test_boot_log.log
+2024-09-03 11:20:21 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/024-08-26 _test_boot_log.log
+2024-09-03 11:20:21 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-26_test_boot_log.log
+2024-09-03 11:20:21 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-26_test_boot_log.log
+2024-09-03 11:20:21 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-27_test_boot_log.log
+2024-09-03 11:20:21 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-27_test_boot_log.log
+2024-09-03 11:21:00 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_log_rpiftpsensor.log to save it
+2024-09-03 11:21:00 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_log_rpiftpsensor.log to save it
+2024-09-03 11:21:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:21:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:21:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/024-08-26 _test_log_rpiftpsensor.log
+2024-09-03 11:21:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/024-08-26 _test_log_rpiftpsensor.log
+2024-09-03 11:21:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-26_test_log_rpiftpsensor.log
+2024-09-03 11:21:00 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-26_test_log_rpiftpsensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_rpisensor.log to save it
+2024-09-03 11:23:13 - RPI Initialization Routine: Opening /home/pi/Raspi-Confgs/test_rpisensor.log to save it
+2024-09-03 11:23:13 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:23:13 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-28_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-28_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-31_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-31_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-01_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-01_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_test_rpisensor.log
+2024-09-03 11:23:13 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_test_rpisensor.log
+2024-09-03 11:46:19 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:46:19 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:46:19 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:19 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:19 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_boot_log.log
+2024-09-03 11:46:19 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_boot_log.log
+2024-09-03 11:46:19 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:46:19 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:46:19 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:46:19 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:46:19 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-28_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-28_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-28_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-29_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-30_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-31_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-31_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-08-31_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-01_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-01_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-01_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-02_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_rpisensor.log
+2024-09-03 11:46:20 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:20 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:20 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:20 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:20 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:46:30 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_boot_log.log
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_rpisensor.log
+2024-09-03 11:46:30 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_rpisensor.log
+2024-09-03 11:46:30 - RPI Initialization Routine: Log data saved in /home/pi/Raspi-Confgs/2024-09-03_rpisensor.log
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:46:30 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_boot_log.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_boot_log.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_rpisensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_rpisensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_rpisensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Log data saved in 2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:49:00 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_boot_log.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_boot_log.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_rpisensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_rpisensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_rpisensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 11:52:18 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:14:47 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-02_boot_log.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-02_boot_log.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_boot_log.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_boot_log.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:14:47 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:14:47 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_rpisensor.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_rpisensor.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_rpisensor.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:14:47 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:14:47 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:14:47 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 12:14:47 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 12:56:37 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 12:56:37 - RPI Initialization Routine: Opening /home/pi/logs/boot_log.log to save it
+2024-09-03 12:56:37 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:56:37 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:56:37 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_boot_log.log
+2024-09-03 12:56:37 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_boot_log.log
+2024-09-03 12:56:37 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 12:56:37 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 12:56:37 - RPI Initialization Routine: Opening /home/pi/logs/rpisensor.log to save it
+2024-09-03 12:56:37 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:56:37 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:56:37 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:56:37 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_rpisensor.log
+2024-09-03 12:56:37 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_rpisensor.log
+2024-09-03 12:56:37 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_rpisensor.log
+2024-09-03 12:56:37 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 12:56:37 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 12:56:37 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 12:56:37 - RPI Initialization Routine: Opening /home/pi/logs/log_rpiftpsensor.log to save it
+2024-09-03 12:56:37 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:56:37 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:56:37 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:56:37 - RPI Initialization Routine: Moving the log data of the previous day into a new file
+2024-09-03 12:56:37 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 12:56:37 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 12:56:37 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 12:56:37 - RPI Initialization Routine: Log data saved in /home/pi/logs/2024-09-03_log_rpiftpsensor.log
+2024-09-03 12:56:37 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 12:56:37 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 12:56:37 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 12:56:37 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it
+2024-09-03 12:56:37 - RPI Initialization Routine: Opening /home/pi/logs/split_logs.log to save it

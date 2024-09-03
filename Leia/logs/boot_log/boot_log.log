@@ -1,0 +1,164 @@
+2024-09-03 00:00:01 - Script started.
+2024-09-03 00:00:01 - RPI Reboot Routine: Python script rpi_ftpsensor.py stopped successfully.
+2024-09-03 00:00:01 - RPI Reboot Routine: Waiting for 10 seconds to ensure the script is terminated.
+2024-09-03 00:00:11 - RPI Reboot Routine: Running cleanup_leds.py
+2024-09-03 00:00:16 - RPI Reboot Routine: Running 
+2024-09-03 00:00:22 - Rebooting the system.
+2024-09-03 00:00:28 - RPI Initialization Routine: Running cleanup_leds.py
+2024-09-03 00:00:36 - RPI Initialization Routine: Running rpistart.py
+2024-09-03 00:00:44 - RPI Initialization Routine: Running upload_not_sent_data.py
+2024-09-03 00:00:52 - RPI Initialization Routine: Running remove_files.py
+2024-09-03 00:00:55 - RPI Initialization Routine: Proceeding to rpi_ftpsensor.py
+2024-09-03 00:00:55 - RPI Initialization Routine: Executing rpi_ftpsensor.py
+2024-09-03 14:27:30 - Script started.
+2024-09-03 14:27:30 - RPI Reboot Routine: Python script rpi_ftpsensor.py stopped successfully.
+2024-09-03 14:27:30 - RPI Reboot Routine: Waiting for 10 seconds to ensure the script is terminated.
+2024-09-03 14:27:40 - RPI Reboot Routine: Running cleanup_leds.py
+2024-09-03 09:27:41 - Cleaning up the GPIO Pins
+2024-09-03 09:27:43 - GPIO Cleaned, ready to use
+2024-09-03 14:27:45 - RPI Reboot Routine: Running 
+2024-09-03 09:27:50 - Red led blinking
+2024-09-03 09:27:50 - RPI Rebooting.
+2024-09-03 14:27:51 - Rebooting the system.
+2024-09-03 14:28:07 - RPI Initialization Routine: Running cleanup_leds.py
+2024-09-03 09:28:10 - Cleaning up the GPIO Pins
+2024-09-03 09:28:12 - GPIO Cleaned, ready to use
+2024-09-03 14:28:14 - RPI Initialization Routine: Running rpistart.py
+2024-09-03 09:28:15 - Starting with the LEDs
+2024-09-03 09:28:20 - RPI Initialized.
+2024-09-03 14:28:22 - RPI Initialization Routine: Running upload_not_sent_data.py
+2024-09-03 09:28:23 - Connecting to the FTP server
+2024-09-03 09:28:24 - Connected to the FTP Server
+2024-09-03 09:28:24 - Connected to the FTP Server
+2024-09-03 09:28:24 - Uploading data (.csv and .jpg)
+2024-09-03 09:28:24 - Uploading data (.csv and .jpg)
+2024-09-03 09:28:24 - All files have been uploaded successfully.
+2024-09-03 09:28:24 - All files have been uploaded successfully.
+2024-09-03 09:28:24 - All files have been uploaded successfully.
+2024-09-03 09:28:24 - Removing data from the failed directory
+2024-09-03 09:28:24 - Removing data from the failed directory
+2024-09-03 09:28:24 - Removing data from the failed directory
+2024-09-03 09:28:24 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 09:28:24 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 09:28:24 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 09:28:24 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 09:28:24 - FTP connection closed.
+2024-09-03 09:28:24 - FTP connection closed.
+2024-09-03 09:28:24 - FTP connection closed.
+2024-09-03 09:28:24 - FTP connection closed.
+2024-09-03 14:28:31 - RPI Initialization Routine: Running remove_files.py
+2024-09-03 14:28:35 - RPI Initialization Routine: Proceeding to rpi_ftpsensor.py
+2024-09-03 14:28:35 - RPI Initialization Routine: Executing rpi_ftpsensor.py
+2024-09-03 09:32:01 - Script started.
+2024-09-03 09:32:02 - RPI Reboot Routine: Python script rpi_ftpsensor.py stopped successfully.
+2024-09-03 09:32:02 - RPI Reboot Routine: Waiting for 10 seconds to ensure the script is terminated.
+2024-09-03 09:32:12 - RPI Reboot Routine: Running cleanup_leds.py
+2024-09-03 09:32:13 - Cleaning up the GPIO Pins
+2024-09-03 09:32:15 - GPIO Cleaned, ready to use
+2024-09-03 09:32:16 - RPI Reboot Routine: Running 
+2024-09-03 09:32:22 - Red led blinking
+2024-09-03 09:32:22 - RPI Rebooting.
+2024-09-03 09:32:22 - Rebooting the system.
+2024-09-03 09:32:38 - RPI Initialization Routine: Running cleanup_leds.py
+2024-09-03 09:32:41 - Cleaning up the GPIO Pins
+2024-09-03 09:32:43 - GPIO Cleaned, ready to use
+2024-09-03 09:32:45 - RPI Initialization Routine: Running rpistart.py
+2024-09-03 09:32:46 - Starting with the LEDs
+2024-09-03 09:32:51 - RPI Initialized.
+2024-09-03 09:32:53 - RPI Initialization Routine: Running upload_not_sent_data.py
+2024-09-03 09:32:54 - Connecting to the FTP server
+2024-09-03 09:32:55 - Connected to the FTP Server
+2024-09-03 09:32:55 - Connected to the FTP Server
+2024-09-03 09:32:55 - Uploading data (.csv and .jpg)
+2024-09-03 09:32:55 - Uploading data (.csv and .jpg)
+2024-09-03 09:32:55 - All files have been uploaded successfully.
+2024-09-03 09:32:55 - All files have been uploaded successfully.
+2024-09-03 09:32:55 - All files have been uploaded successfully.
+2024-09-03 09:32:55 - Removing data from the failed directory
+2024-09-03 09:32:55 - Removing data from the failed directory
+2024-09-03 09:32:55 - Removing data from the failed directory
+2024-09-03 09:32:55 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 09:32:55 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 09:32:55 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 09:32:55 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 09:32:55 - FTP connection closed.
+2024-09-03 09:32:55 - FTP connection closed.
+2024-09-03 09:32:55 - FTP connection closed.
+2024-09-03 09:32:55 - FTP connection closed.
+2024-09-03 09:33:03 - RPI Initialization Routine: Running remove_files.py
+2024-09-03 09:33:05 - RPI Initialization Routine: Proceeding to rpi_ftpsensor.py
+2024-09-03 09:33:05 - RPI Initialization Routine: Executing rpi_ftpsensor.py
+2024-09-03 10:17:51 - Script started.
+2024-09-03 10:17:51 - RPI Reboot Routine: Python script rpi_ftpsensor.py stopped successfully.
+2024-09-03 10:17:51 - RPI Reboot Routine: Waiting for 10 seconds to ensure the script is terminated.
+2024-09-03 10:17:53 - RPI Initialization Routine: Proceeding to rpi_ftpsensor.py
+2024-09-03 10:17:53 - RPI Initialization Routine: Executing rpi_ftpsensor.py
+2024-09-03 10:18:01 - RPI Reboot Routine: Running cleanup_leds.py
+2024-09-03 10:18:03 - RPI Reboot Routine: Running 
+2024-09-03 10:18:04 - Rebooting the system.
+2024-09-03 10:18:19 - RPI Initialization Routine: Running cleanup_leds.py
+2024-09-03 10:18:23 - Cleaning up the GPIO Pins
+2024-09-03 10:18:25 - GPIO Cleaned, ready to use
+2024-09-03 10:18:27 - RPI Initialization Routine: Running rpistart.py
+2024-09-03 10:18:28 - Starting with the LEDs
+2024-09-03 10:18:33 - RPI Initialized.
+2024-09-03 10:18:35 - RPI Initialization Routine: Running upload_not_sent_data.py
+2024-09-03 10:18:36 - Connecting to the FTP server
+2024-09-03 10:18:37 - Connected to the FTP Server
+2024-09-03 10:18:37 - Connected to the FTP Server
+2024-09-03 10:18:37 - Uploading data (.csv and .jpg)
+2024-09-03 10:18:37 - Uploading data (.csv and .jpg)
+2024-09-03 10:18:37 - All files have been uploaded successfully.
+2024-09-03 10:18:37 - All files have been uploaded successfully.
+2024-09-03 10:18:37 - All files have been uploaded successfully.
+2024-09-03 10:18:37 - Removing data from the failed directory
+2024-09-03 10:18:37 - Removing data from the failed directory
+2024-09-03 10:18:37 - Removing data from the failed directory
+2024-09-03 10:18:37 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 10:18:37 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 10:18:37 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 10:18:37 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 10:18:37 - FTP connection closed.
+2024-09-03 10:18:37 - FTP connection closed.
+2024-09-03 10:18:37 - FTP connection closed.
+2024-09-03 10:18:37 - FTP connection closed.
+2024-09-03 10:18:45 - RPI Initialization Routine: Running remove_files.py
+2024-09-03 10:18:47 - RPI Initialization Routine: Running cleanup_log.py
+2024-09-03 10:19:05 - RPI Initialization Routine: Proceeding to rpi_ftpsensor.py
+2024-09-03 10:19:05 - RPI Initialization Routine: Executing rpi_ftpsensor.py
+2024-09-03 12:13:58 - Script started.
+2024-09-03 12:13:58 - RPI Reboot Routine: Python script rpi_ftpsensor.py stopped successfully.
+2024-09-03 12:13:58 - RPI Reboot Routine: Waiting for 10 seconds to ensure the script is terminated.
+2024-09-03 12:13:58 - RPI Initialization Routine: Proceeding to rpi_ftpsensor.py
+2024-09-03 12:13:58 - RPI Initialization Routine: Executing rpi_ftpsensor.py
+2024-09-03 12:14:08 - RPI Reboot Routine: Running cleanup_leds.py
+2024-09-03 12:14:10 - RPI Reboot Routine: Running 
+2024-09-03 12:14:11 - Rebooting the system.
+2024-09-03 12:14:19 - RPI Initialization Routine: Running cleanup_leds.py
+2024-09-03 12:14:22 - Cleaning up the GPIO Pins
+2024-09-03 12:14:24 - GPIO Cleaned, ready to use
+2024-09-03 12:14:26 - RPI Initialization Routine: Running rpistart.py
+2024-09-03 12:14:27 - Starting with the LEDs
+2024-09-03 12:14:32 - RPI Initialized.
+2024-09-03 12:14:34 - RPI Initialization Routine: Running upload_not_sent_data.py
+2024-09-03 12:14:35 - Connecting to the FTP server
+2024-09-03 12:14:36 - Connected to the FTP Server
+2024-09-03 12:14:36 - Connected to the FTP Server
+2024-09-03 12:14:36 - Uploading data (.csv and .jpg)
+2024-09-03 12:14:36 - Uploading data (.csv and .jpg)
+2024-09-03 12:14:36 - All files have been uploaded successfully.
+2024-09-03 12:14:36 - All files have been uploaded successfully.
+2024-09-03 12:14:36 - All files have been uploaded successfully.
+2024-09-03 12:14:36 - Removing data from the failed directory
+2024-09-03 12:14:36 - Removing data from the failed directory
+2024-09-03 12:14:36 - Removing data from the failed directory
+2024-09-03 12:14:36 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 12:14:36 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 12:14:36 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 12:14:36 - No files to remove. The failed_upload_dir is empty.
+2024-09-03 12:14:36 - FTP connection closed.
+2024-09-03 12:14:36 - FTP connection closed.
+2024-09-03 12:14:36 - FTP connection closed.
+2024-09-03 12:14:36 - FTP connection closed.
+2024-09-03 12:14:43 - RPI Initialization Routine: Running remove_files.py
+2024-09-03 12:14:46 - RPI Initialization Routine: Running cleanup_log.py
