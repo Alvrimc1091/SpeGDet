@@ -69,7 +69,7 @@ password = "qwerty"
 directory_path = "/home/pi/Agrosuper-cb/TestMeassures"
 remote_path = "~/Documents/Workspace/Granos/FTP/Data_leia"
 
-log_file_path = "/home/pi/logs/log_rpiftpsensor.log"
+log_file_path = "/home/pi/logs/log_rpiftpsensor/log_rpiftpsensor.log"
 
 # -------------------------------------------------------------------
 # ----------------------- Definición de funciones -------------------

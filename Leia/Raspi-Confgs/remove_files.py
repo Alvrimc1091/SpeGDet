@@ -4,7 +4,7 @@ import datetime
 import logging
 import pytz
 
-log_file_path = "/home/pi/logs/rpisensor.log"
+log_file_path = "/home/pi/logs/rpisensor/rpisensor.log"
 
 # Configuración del logger
 def setup_logger():

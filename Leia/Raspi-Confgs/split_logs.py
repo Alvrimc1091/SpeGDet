@@ -56,7 +56,7 @@ def split_log_file(log_file_path):
     with open(log_file_path, 'w') as log_file:
         for date, logs in sorted(logs_by_date.items()):
             if logs:  # Check if there are logs for that date
-                date_log_filename = f"/home/pi/logs/{base_name}/{date}_{base_name}"
+                date_log_filename = f"/home/pi/logs/{base_name.replace('.log', '', 1)}/{date}_{base_name}"
                 with open(date_log_filename, 'a') as date_log_file:
                     date_log_file.writelines(logs)
                 log_with_time(logger, f"RPI Initialization Routine: Log data saved in {date_log_filename}")
